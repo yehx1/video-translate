@@ -1,0 +1,407 @@
+{% extends 'base.html' %}
+
+{% block title %}任务列表{% endblock %}
+
+{% block content %}
+<style>
+/* ---- 操作栏一行放下优化 ---- */
+.action-bar{
+  display:flex; align-items:center; gap:.4rem;
+  flex-wrap:nowrap; white-space:nowrap; overflow-x:auto;
+  scrollbar-width: thin;
+}
+.action-bar::-webkit-scrollbar{height:6px}
+.action-bar::-webkit-scrollbar-thumb{background:rgba(0,0,0,.15);border-radius:3px}
+.action-bar::-webkit-scrollbar-track{background:transparent}
+
+/* 紧凑按钮 */
+.btn-compact{ padding:.3rem .5rem !important; font-size:.82rem !important; line-height:1 !important; }
+.btn-compact i{margin-right:.35rem}
+.action-bar .btn-compact i{margin-right:.2rem}
+
+@media (max-width: 992px){
+  .btn-compact .btn-text{display:none}
+  .btn-compact i{margin-right:0}
+  .action-bar{gap:.3rem}
+}
+
+/* ---- 创建时间一行 + 小号字体 ---- */
+.time-cell{ display:inline-flex; align-items:center; font-size:.85rem; gap:.35rem; white-space:nowrap; }
+.time-cell i{ font-size:.95rem; opacity:.85; }
+@media (max-width: 992px){
+  .time-cell{ font-size:.78rem; gap:.25rem }
+  .time-cell i{ font-size:.9rem }
+}
+
+/* ---- 目标语言列小号字体（不换行） ---- */
+.lang-cell{ white-space:nowrap; font-size:.85rem; }
+@media (max-width: 992px){ .lang-cell{ font-size:.78rem; } }
+
+/* ---- 状态列不换行 ---- */
+.status-cell{ white-space:nowrap; }
+.status-cell .badge-company{
+  display:inline-flex; align-items:center; gap:.25rem;
+  white-space:nowrap; line-height:1.1; padding:.28rem .5rem; font-size:.82rem;
+}
+@media (max-width: 992px){
+  .status-cell .badge-company{ font-size:.78rem; padding:.24rem .45rem; }
+}
+
+/* ---- 名称列：只显示 5 字 + …（服务端已截断），不换行 ---- */
+.name-cell{ white-space:nowrap; max-width:0; font-size:.92rem; }
+
+/* ---- 进度文本：前缀固定，状态最多 15 字 + …，title 提示完整内容 ---- */
+.progress-text{
+  display:block;
+  font-size:.86rem;
+  white-space:nowrap; /* 只走字符截断，不换行 */
+}
+@media (max-width: 992px){ .progress-text{ font-size:.8rem; } }
+</style>
+
+<div class="card-company">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <h5 class="mb-0"><i class="bi bi-list-task me-2"></i>任务列表</h5>
+    <a href="{% url 'video_upload' %}" class="btn-company btn-sm btn-compact">
+      <i class="bi bi-upload"></i><span class="btn-text">新建任务</span>
+    </a>
+  </div>
+
+  <div class="card-body">
+    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+
+    <div class="table-responsive">
+      <table class="table-company">
+        <thead>
+          <tr>
+            <th>ID</th><th>名称</th><th>目标语言</th><th>状态</th><th>进度</th><th>创建时间</th><th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for task in tasks %}
+          <tr>
+            <td>{{ task.id }}</td>
+
+            <!-- 名称：最多 5 字 + …（这里保留你的服务端截断逻辑即可） -->
+            <td class="name-cell" title="{{ task.title }}">
+              {{ task.title|slice:":5" }}{% if task.title|length > 5 %}…{% endif %}
+            </td>
+
+            <td class="lang-cell">{{ task.target_language_display }}</td>
+
+            <td class="status-cell">
+              {% if task.status == 'QUEUED' %}
+                <span class="badge-company badge-queued">排队中</span>
+              {% elif task.status == 'PROCESSING' %}
+                <span class="badge-company badge-processing"><i class="bi bi-spinner fa-spin me-1"></i>处理中</span>
+              {% elif task.status == 'REVIEW' %}
+                <span class="badge-company badge-review">待确认</span>
+              {% elif task.status == 'SUCCESS' %}
+                <span class="badge-company badge-success">成功</span>
+              {% else %}
+                <span class="badge-company badge-failed">失败</span>
+              {% endif %}
+            </td>
+
+            <td>
+              <div class="progress-company">
+                <div class="progress-bar" id="progress-{{ task.id }}" role="progressbar"
+                     style="width: {{ task.progress }}%;" aria-valuenow="{{ task.progress }}"
+                     aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+
+              {# 首屏不再服务端截断，由前端统一口径处理 #}
+              {% if task.status == 'QUEUED' %}
+                {% with initial_status="排队中" %}
+                  <small id="status-{{ task.id }}"
+                         class="text-secondary mt-1 progress-text"
+                         data-initial-progress="{{ task.progress }}"
+                         data-initial-status="{{ initial_status }}"
+                         title="{{ task.progress }}% - {{ initial_status }}">
+                    {{ task.progress }}% - {{ initial_status }}
+                  </small>
+                {% endwith %}
+              {% else %}
+                {% with initial_status=task.get_status_display %}
+                  <small id="status-{{ task.id }}"
+                         class="text-secondary mt-1 progress-text"
+                         data-initial-progress="{{ task.progress }}"
+                         data-initial-status="{{ initial_status }}"
+                         title="{{ task.progress }}% - {{ initial_status }}">
+                    {{ task.progress }}% - {{ initial_status }}
+                  </small>
+                {% endwith %}
+              {% endif %}
+            </td>
+
+            <td>
+              <div class="time-cell" title="{{ task.created_at|date:'Y-m-d H:i:s' }}">
+                <i class="bi bi-clock"></i>
+                <span class="d-none d-lg-inline">{{ task.created_at|date:"Y-m-d H:i" }}</span>
+                <span class="d-lg-none">{{ task.created_at|date:"m-d H:i" }}</span>
+              </div>
+            </td>
+
+            <td>
+              <div class="action-bar" id="action-{{ task.id }}">
+                {# 首屏按钮保持你的原样（略） #}
+                {% if task.status == 'SUCCESS' %}
+                  <a href="{% url 'task_detail' task.id %}" class="btn-company-outline btn-sm btn-compact">
+                    <i class="bi bi-eye"></i><span class="btn-text">编辑字幕</span>
+                  </a>
+                  {% if task.final_video_file %}
+                  <a href="{{ task.final_video_file.url }}" class="btn-company-outline btn-sm btn-compact" download>
+                    <i class="bi bi-film"></i><span class="btn-text">下载视频</span>
+                  </a>
+                  {% endif %}
+                  <form action="{% url 'refinalize_video' task.id %}" method="post" class="d-inline">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-company-outline btn-sm btn-compact" style="color:#EF4444;border-color:#EF4444;">
+                      <i class="bi bi-arrow-repeat"></i><span class="btn-text">重新合成</span>
+                    </button>
+                  </form>
+                  <form action="{% url 'restart_task' task.id %}" method="post" class="d-inline">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-company-outline btn-sm btn-compact" style="color:#0EA5E9;border-color:#0EA5E9;"
+                            onclick="return confirm('确认重新开始该任务吗？这将清空现有字幕与中间产物并从头处理。')">
+                      <i class="bi bi-arrow-clockwise"></i><span class="btn-text">重新开始</span>
+                    </button>
+                  </form>
+                  <form action="{% url 'delete_task' task.id %}" method="post" class="d-inline">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-company-outline btn-sm btn-compact" style="color:#DC2626;border-color:#DC2626;"
+                            onclick="return confirm('确定要删除该任务吗？将一并删除字幕与相关产物文件。')">
+                      <i class="bi bi-trash"></i><span class="btn-text">删除</span>
+                    </button>
+                  </form>
+                {% elif task.status == 'REVIEW' %}
+                  <!-- 同上，略 -->
+                {% elif task.status == 'FAILED' %}
+                  <!-- 同上，略 -->
+                {% else %}
+                  <form action="{% url 'stop_task' task.id %}" method="post" class="d-inline">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-company-outline btn-sm btn-compact" style="color:#EF4444;border-color:#EF4444;"
+                            onclick="return confirm('确定要停止该任务吗？')">
+                      <i class="bi bi-stop-circle"></i><span class="btn-text">停止</span>
+                    </button>
+                  </form>
+                {% endif %}
+              </div>
+            </td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="7" class="text-center text-secondary py-4">
+              <i class="bi bi-folder-open me-2"></i>暂无任务，请上传视频创建任务
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+// —— 截断工具：按“字形簇”截断，兼容中英文/emoji —— //
+function truncateGraphemes(str, limit){
+  try{
+    if (typeof Intl !== 'undefined' && Intl.Segmenter){
+      const seg = new Intl.Segmenter(undefined, {granularity:'grapheme'});
+      const iter = seg.segment(String(str || ''))[Symbol.iterator]();
+      let out = '', n = 0, step;
+      while(!(step = iter.next()).done){
+        const g = step.value.segment;
+        if(++n > limit) break;
+        out += g;
+      }
+      return { text: out, truncated: n > limit };
+    }
+  }catch(e){}
+  // 降级（可能对 emoji 计数不准，但保证不会报错）
+  const s = String(str || '');
+  return { text: s.slice(0, limit), truncated: s.length > limit };
+}
+
+// 只截断“状态文本”部分，前缀永远展示完整进度（% - ）
+// 最终展示：`${progress}% - ${trimmedStatus}`
+function setProgressText(el, progress, status, limit=15){
+  if(!el) return;
+  const fullStatus = String(status || '');
+  const { text: cut, truncated } = truncateGraphemes(fullStatus, limit);
+  const shown = truncated ? (cut + '…') : cut;
+  const display = `${progress}% - ${shown}`;
+  const title   = `${progress}% - ${fullStatus}`;
+  el.textContent = display;
+  el.title = title;
+}
+
+// 渲染操作区（与你原来一致，这里保持不变）
+function renderActions(actionCell, taskId, data){
+  if (!actionCell) return;
+  const csrfEl = document.querySelector('[name=csrfmiddlewaretoken]');
+  const csrfToken = csrfEl ? csrfEl.value : '';
+  let html = '';
+  switch (data.task_status) {
+    case 'SUCCESS':
+      html = `
+        <a href="/task/${taskId}/" class="btn-company-outline btn-sm btn-compact">
+          <i class="bi bi-eye"></i><span class="btn-text">编辑字幕</span>
+        </a>
+        ${data.final_video_file ? `
+        <a href="/media/${data.final_video_file}" class="btn-company-outline btn-sm btn-compact" download>
+          <i class="bi bi-film"></i><span class="btn-text">下载视频</span>
+        </a>` : ``}
+        <form action="/task/${taskId}/refinalize/" method="post" class="d-inline">
+          <input type="hidden" name="csrfmiddlewaretoken" value="${csrfToken}">
+          <button type="submit" class="btn-company-outline btn-sm btn-compact" style="color:#EF4444;border-color:#EF4444;">
+            <i class="bi bi-arrow-repeat"></i><span class="btn-text">重新合成</span>
+          </button>
+        </form>
+        <form action="/task/${taskId}/restart/" method="post" class="d-inline">
+          <input type="hidden" name="csrfmiddlewaretoken" value="${csrfToken}">
+          <button type="submit" class="btn-company-outline btn-sm btn-compact" style="color:#0EA5E9;border-color:#0EA5E9;"
+                  onclick="return confirm('确认重新开始该任务吗？这将清空现有字幕与中间产物并从头处理。')">
+            <i class="bi bi-arrow-clockwise"></i><span class="btn-text">重新开始</span>
+          </button>
+        </form>
+        <form action="/task/${taskId}/delete/" method="post" class="d-inline">
+          <input type="hidden" name="csrfmiddlewaretoken" value="${csrfToken}">
+          <button type="submit" class="btn-company-outline btn-sm btn-compact" style="color:#DC2626;border-color:#DC2626;"
+                  onclick="return confirm('确定要删除该任务吗？将一并删除字幕与相关产物文件。')">
+            <i class="bi bi-trash"></i><span class="btn-text">删除</span>
+          </button>
+        </form>
+      `;
+      break;
+    case 'REVIEW':
+      html = `
+        <a href="/task/${taskId}/" class="btn-company-outline btn-sm btn-compact">
+          <i class="bi bi-eye"></i><span class="btn-text">编辑字幕</span>
+        </a>
+        <form action="/task/${taskId}/confirm/" method="post" class="d-inline">
+          <input type="hidden" name="csrfmiddlewaretoken" value="${csrfToken}">
+          <button type="submit" class="btn-company btn-sm btn-compact">
+            <i class="bi bi-check-circle"></i><span class="btn-text">确认生成</span>
+          </button>
+        </form>
+        <form action="/task/${taskId}/restart/" method="post" class="d-inline">
+          <input type="hidden" name="csrfmiddlewaretoken" value="${csrfToken}">
+          <button type="submit" class="btn-company-outline btn-sm btn-compact" style="color:#0EA5E9;border-color:#0EA5E9;"
+                  onclick="return confirm('确认重新开始该任务吗？这将清空现有字幕与中间产物并从头处理。')">
+            <i class="bi bi-arrow-clockwise"></i><span class="btn-text">重新开始</span>
+          </button>
+        </form>
+        <form action="/task/${taskId}/delete/" method="post" class="d-inline">
+          <input type="hidden" name="csrfmiddlewaretoken" value="${csrfToken}">
+          <button type="submit" class="btn-company-outline btn-sm btn-compact" style="color:#DC2626;border-color:#DC2626;"
+                  onclick="return confirm('确定要删除该任务吗？将一并删除字幕与相关产物文件。')">
+            <i class="bi bi-trash"></i><span class="btn-text">删除</span>
+          </button>
+        </form>
+      `;
+      break;
+    case 'FAILED':
+      html = `
+        <button class="btn-company-outline btn-sm btn-compact" disabled style="color:#EF4444;border-color:#EF4444;">
+          <i class="bi bi-exclamation-circle"></i><span class="btn-text">处理失败</span>
+        </button>
+        <form action="/task/${taskId}/restart/" method="post" class="d-inline">
+          <input type="hidden" name="csrfmiddlewaretoken" value="${csrfToken}">
+          <button type="submit" class="btn-company-outline btn-sm btn-compact" style="color:#0EA5E9;border-color:#0EA5E9;"
+                  onclick="return confirm('确认重新开始该任务吗？这将清空现有字幕与中间产物并从头处理。')">
+            <i class="bi bi-arrow-clockwise"></i><span class="btn-text">重新开始</span>
+          </button>
+        </form>
+        <form action="/task/${taskId}/delete/" method="post" class="d-inline">
+          <input type="hidden" name="csrfmiddlewaretoken" value="${csrfToken}">
+          <button type="submit" class="btn-company-outline btn-sm btn-compact" style="color:#DC2626;border-color:#DC2626;"
+                  onclick="return confirm('确定要删除该任务吗？将一并删除字幕与相关产物文件。')">
+            <i class="bi bi-trash"></i><span class="btn-text">删除</span>
+          </button>
+        </form>
+      `;
+      break;
+    default:
+      html = `
+        <form action="/task/${taskId}/stop/" method="post" class="d-inline">
+          <input type="hidden" name="csrfmiddlewaretoken" value="${csrfToken}">
+          <button type="submit" class="btn-company-outline btn-sm btn-compact" style="color:#EF4444;border-color:#EF4444;"
+                  onclick="return confirm('确定要停止该任务吗？')">
+            <i class="bi bi-stop-circle"></i><span class="btn-text">停止</span>
+          </button>
+        </form>
+      `;
+  }
+  actionCell.innerHTML = html;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  {% for task in tasks %}
+  (function(taskId, celeryTaskId){
+    const actionCell = document.getElementById(`action-${taskId}`);
+
+    const updateProgress = () => {
+      fetch(`/api/task/${celeryTaskId}/progress/`)
+        .then(r => r.json())
+        .then(data => {
+          const bar = document.getElementById(`progress-${taskId}`);
+          const txt = document.getElementById(`status-${taskId}`);
+          const row = bar ? bar.closest('tr') : null;
+          if (!bar || !txt || !row) return;
+
+          // 进度条
+          bar.style.width = `${data.progress}%`;
+          bar.setAttribute('aria-valuenow', data.progress);
+
+          // 进度文本（前缀固定，状态本体最多 15 字）
+          setProgressText(txt, data.progress, data.status, 15);
+
+          // 状态徽章
+          const badge = row.querySelector('.badge-company');
+          if (badge) {
+            if (data.task_status === 'SUCCESS') {
+              badge.className = 'badge-company badge-success';
+              badge.innerHTML = '成功';
+            } else if (data.task_status === 'FAILED') {
+              badge.className = 'badge-company badge-failed';
+              badge.innerHTML = '失败';
+            } else if (data.task_status === 'REVIEW') {
+              badge.className = 'badge-company badge-review';
+              badge.innerHTML = '待确认';
+            } else if (data.task_status === 'PROCESSING') {
+              badge.className = 'badge-company badge-processing';
+              badge.innerHTML = '<i class="bi bi-spinner fa-spin me-1"></i>处理中';
+            } else if (data.task_status === 'QUEUED') {
+              badge.className = 'badge-company badge-queued';
+              badge.innerHTML = '排队中';
+            }
+          }
+
+          // 操作栏
+          renderActions(actionCell, taskId, data);
+        })
+        .catch(err => console.error('更新进度失败：', err));
+    };
+
+    // —— 首屏：用 data-* 初始化，统一口径 —— //
+    (function initTrim(){
+      const el = document.getElementById(`status-${taskId}`);
+      if (!el) return;
+      const p = Number(el.getAttribute('data-initial-progress')) || 0;
+      const s = el.getAttribute('data-initial-status') || '';
+      setProgressText(el, p, s, 15);
+    })();
+
+    // —— 轮询 —— //
+    updateProgress();
+    setInterval(updateProgress, 3000);
+  })(
+    {{ task.id }},
+    ('{{ task.celery_task_id|default_if_none:"" }}' ? '{{ task.celery_task_id|default_if_none:"" }}' : 'id-{{ task.id }}')
+  );
+  {% endfor %}
+});
+</script>
+{% endblock %}

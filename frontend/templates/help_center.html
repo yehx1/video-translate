@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% block title %}帮助中心{% endblock %}
+{% block content %}
+
+<div class="card-company">
+  <div class="card-header">
+    <h5 class="mb-0"><i class="bi bi-question-circle me-2"></i>帮助中心</h5>
+  </div>
+  <div class="card-body">
+    <!-- 一、助手介绍 -->
+    <h6 class="mb-2">一、助手介绍</h6>
+    <p class="text-secondary mb-4">
+      「视频翻译助手」支持：<strong>上传视频 → 提取/分离音轨 → 语音识别 → 机器翻译 → 语音合成（TTS，声音克隆） → 最终视频</strong> 的一站式流程。
+      您可在 <em>字幕编辑</em> 页面修订翻译、设置字幕样式与音色，并一键生成成片。<br><br>
+      自动生成字幕与多语配音，支持中英日韩法德等语言，助您实现视频出海或回流、国内外双向分发与全球多语言发布，适用于短视频二创、课程与培训、产品演示等场景。
+    </p>
+
+    <!-- 二、快速上手 -->
+    <h6 class="mb-2">二、快速上手</h6>
+    <ol class="mb-4">
+      <li>进入「新建任务」，上传视频并选择目标语言。</li>
+      <li>等待阶段一完成，状态变为「待确认」。进入「编辑字幕」检查并修改翻译。</li>
+      <li>保存 <em>字幕样式</em> 和 <em>TTS 音色</em>（可选）。</li>
+      <li>点击 <strong>确认生成</strong>，开始合成语音与最终视频。</li>
+    </ol>
+
+    <!-- 三、按钮说明（简洁一目了然） -->
+    <h6 class="mb-2">三、按钮说明</h6>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="p-3 border rounded-3">
+          <div class="d-flex align-items-center mb-2">
+            <span class="badge bg-primary me-2"><i class="bi bi-check-circle"></i></span>
+            <strong>确认生成</strong>
+          </div>
+          <div class="text-secondary small">
+            AI 大模型处理的字幕可人工复核或编辑，修改完成后，点击确认可开始最终合成。
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-3 border rounded-3">
+          <div class="d-flex align-items-center mb-2">
+            <span class="badge bg-outline-primary me-2" style="border:1px solid #165DFF;color:#165DFF;background:#E8F3FF;"><i class="bi bi-arrow-repeat"></i></span>
+            <strong>重新合成</strong>
+          </div>
+          <div class="text-secondary small">
+            修改翻译内容、音色或样式后可走完整合成：<strong>重新做TTS并生成新视频</strong>（覆盖原成片）。
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-3 border rounded-3">
+          <div class="d-flex align-items-center mb-2">
+            <span class="badge bg-outline-warning me-2" style="border:1px solid #D97706;color:#D97706;background:#FFF7ED;"><i class="bi bi-cc-circle"></i></span>
+            <strong>仅重新合成视频字幕</strong>
+          </div>
+          <div class="text-secondary small">
+            <u>不重新做TTS</u>，复用已生成的配音与去人声视频，适合调整字幕格式后<strong>重新烧录字幕</strong>后出片。
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-3 border rounded-3">
+          <div class="d-flex align-items-center mb-2">
+            <span class="badge bg-outline-info me-2" style="border:1px solid #0EA5E9;color:#0EA5E9;background:#E0F2FE;"><i class="bi bi-arrow-clockwise"></i></span>
+            <strong>重新开始</strong>
+          </div>
+          <div class="text-secondary small">
+            从<strong>阶段一</strong>重新处理（清空现有字幕与中间产物，但保留原始视频）。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 四、常见问题（FAQ） -->
+    <h6 class="mt-4 mb-2">四、常见问题</h6>
+    <div class="accordion" id="faq">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+            1）编辑字幕时字幕如何换行？
+          </button>
+        </h2>
+        <div id="a1" class="accordion-collapse collapse" data-bs-parent="#faq">
+          <div class="accordion-body small text-secondary">
+            用<strong> \n </strong>来表示换行：例如，第一行\n第二行
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+            2）为什么「仅重新合成视频字幕」更快？
+          </button>
+        </h2>
+        <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faq">
+          <div class="accordion-body small text-secondary">
+            因为它<strong>跳过了TTS</strong>与之前的流程，直接复用已有音频与无声视频，仅按新样式重烧字幕。
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4">
+            3）字幕样式的「背景透明度」如何理解？
+          </button>
+        </h2>
+        <div id="a4" class="accordion-collapse collapse" data-bs-parent="#faq">
+          <div class="accordion-body small text-secondary">
+            数值范围 0~1，其中 <code>1=完全透明</code>、<code>0=不透明</code>。用于生成 ASS 的盒状背景透明度。
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+            4）交流讨论与建议（联系方式）
+          </button>
+        </h2>
+        <div id="a1" class="accordion-collapse collapse" data-bs-parent="#faq">
+          <div class="accordion-body small text-secondary">
+            <strong>微信：</strong><code>fgai66</code><br>
+            <strong>邮箱：</strong><code>ai_chatbot@163.com</code><br>
+            <strong>QQ群：</strong><code>1061043049</code><br>
+            <strong>抖音：</strong><code>叶老师讲AI</code><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 五、结果查看 -->
+    <h6 class="mt-4 mb-2">五、结果查看</h6>
+    <p class="text-secondary small mb-0">
+      成功后可在「字幕编辑」页面顶部查看<strong>最终视频</strong>（在线播放或下载），并在表格下方继续微调单条字幕。
+    </p>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,4943 @@
+{
+  "zh-f-001": {
+    "voice": "zh-CN-XiaochenMultilingualNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "友好、随和、轻快-1",
+    "enname": "Chinese",
+    "enmark": "friendly, easygoing"
+  },
+  "zh-f-002": {
+    "voice": "zh-CN-XiaochenNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "友好、随和、轻快-2",
+    "enname": "Chinese",
+    "enmark": "friendly, easygoing"
+  },
+  "zh-f-003": {
+    "voice": "zh-CN-XiaohanNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "温柔、温暖、情感丰富",
+    "enname": "Chinese",
+    "enmark": "gentle, warm, expressive"
+  },
+  "zh-f-004": {
+    "voice": "zh-CN-XiaomengNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "温柔、轻快、友好",
+    "enname": "Chinese",
+    "enmark": "gentle, upbeat, friendly"
+  },
+  "zh-f-005": {
+    "voice": "zh-CN-XiaomoNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "低沉、随和、平静",
+    "enname": "Chinese",
+    "enmark": "deep, easygoing, calm"
+  },
+  "zh-f-006": {
+    "voice": "zh-CN-XiaoqiuNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "平静、有感染力、舒缓",
+    "enname": "Chinese",
+    "enmark": "calm, engaging, soothing"
+  },
+  "zh-f-007": {
+    "voice": "zh-CN-XiaorouNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "开朗、有感染力、讨喜",
+    "enname": "Chinese",
+    "enmark": "cheerful, engaging, likable"
+  },
+  "zh-f-008": {
+    "voice": "zh-CN-XiaoruiNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "自信、情感丰富、沙哑",
+    "enname": "Chinese",
+    "enmark": "confident, expressive, husky"
+  },
+  "zh-f-009": {
+    "voice": "zh-CN-XiaoshuangNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "儿童、清脆、开朗、明亮",
+    "enname": "Chinese",
+    "enmark": "childlike, crisp, cheerful, bright"
+  },
+  "zh-f-010": {
+    "voice": "zh-CN-XiaoxiaoDialectsNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "口音、温暖、生动、明亮",
+    "enname": "Chinese",
+    "enmark": "accented, warm, lively, bright"
+  },
+  "zh-f-011": {
+    "voice": "zh-CN-XiaoxiaoMultilingualNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "温暖、生动、明亮",
+    "enname": "Chinese",
+    "enmark": "warm, lively, bright"
+  },
+  "zh-f-012": {
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "温暖、圆润、生动",
+    "enname": "Chinese",
+    "enmark": "warm, rounded, lively"
+  },
+  "zh-f-013": {
+    "voice": "zh-CN-XiaoyanNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "温暖、温柔、富有同理心",
+    "enname": "Chinese",
+    "enmark": "warm, gentle, empathetic"
+  },
+  "zh-f-014": {
+    "voice": "zh-CN-XiaoyiNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "明亮、情感丰富、有感染力",
+    "enname": "Chinese",
+    "enmark": "bright, expressive, engaging"
+  },
+  "zh-f-015": {
+    "voice": "zh-CN-XiaoyouNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "儿童、清脆、开朗、明亮",
+    "enname": "Chinese",
+    "enmark": "childlike, crisp, cheerful, bright"
+  },
+  "zh-f-016": {
+    "voice": "zh-CN-XiaoyuMultilingualNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "低沉、自信、随和",
+    "enname": "Chinese",
+    "enmark": "deep, confident, easygoing"
+  },
+  "zh-f-017": {
+    "voice": "zh-CN-XiaozhenNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "平静、严肃、自信",
+    "enname": "Chinese",
+    "enmark": "calm, serious, confident"
+  },
+  "zh-f-018": {
+    "voice": "zh-CN-liaoning-XiaobeiNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "东北、友好、随和、温柔",
+    "enname": "Chinese",
+    "enmark": "Northeastern, friendly, easygoing, gentle"
+  },
+  "zh-f-019": {
+    "voice": "zh-CN-shaanxi-XiaoniNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "陕西、自信、有感染力、随和",
+    "enname": "Chinese",
+    "enmark": "Shaanxi, confident, engaging, easygoing"
+  },
+  "zh-f-020": {
+    "voice": "zh-HK-HiuGaaiNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "港普、粤语、明亮、清晰",
+    "enname": "Chinese",
+    "enmark": "Hong Kong Putonghua, Cantonese, bright, clear"
+  },
+  "zh-f-021": {
+    "voice": "zh-HK-HiuMaanNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "港普、粤语、明亮、轻快",
+    "enname": "Chinese",
+    "enmark": "Hong Kong Putonghua, Cantonese, bright, upbeat"
+  },
+  "zh-f-022": {
+    "voice": "zh-TW-HsiaoChenNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "台湾、柔和、关怀",
+    "enname": "Chinese",
+    "enmark": "Taiwan, 柔和, 关怀"
+  },
+  "zh-f-023": {
+    "voice": "zh-TW-HsiaoYuNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "中文",
+    "mark": "台湾、清脆、明亮、清晰",
+    "enname": "Chinese",
+    "enmark": "Taiwan, crisp, bright, clear"
+  },
+  "zh-m-001": {
+    "voice": "zh-CN-YunfengNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "自信、生动、情感丰富",
+    "enname": "Chinese",
+    "enmark": "confident, lively, expressive"
+  },
+  "zh-m-002": {
+    "voice": "zh-CN-YunhaoNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "温暖、柔和、轻快",
+    "enname": "Chinese",
+    "enmark": "warm, 柔和, upbeat"
+  },
+  "zh-m-003": {
+    "voice": "zh-CN-YunjianNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "低沉、随和、有感染力",
+    "enname": "Chinese",
+    "enmark": "deep, easygoing, engaging"
+  },
+  "zh-m-004": {
+    "voice": "zh-CN-YunjieNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "随和、自信、温暖",
+    "enname": "Chinese",
+    "enmark": "easygoing, confident, warm"
+  },
+  "zh-m-005": {
+    "voice": "zh-CN-YunxiNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "明亮、生动、开朗",
+    "enname": "Chinese",
+    "enmark": "bright, lively, cheerful"
+  },
+  "zh-m-006": {
+    "voice": "zh-CN-YunxiaNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "儿童、开朗、友好、情感丰富",
+    "enname": "Chinese",
+    "enmark": "childlike, cheerful, friendly, expressive"
+  },
+  "zh-m-007": {
+    "voice": "zh-CN-YunxiaoMultilingualNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "温柔、随和、友好",
+    "enname": "Chinese",
+    "enmark": "gentle, easygoing, friendly"
+  },
+  "zh-m-008": {
+    "voice": "zh-CN-YunyangNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "正式、低沉、平静",
+    "enname": "Chinese",
+    "enmark": "formal, deep, calm"
+  },
+  "zh-m-009": {
+    "voice": "zh-CN-YunyeNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "随和、低沉、平静",
+    "enname": "Chinese",
+    "enmark": "easygoing, deep, calm"
+  },
+  "zh-m-010": {
+    "voice": "zh-CN-YunyiMultilingualNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "温柔、随和、友好",
+    "enname": "Chinese",
+    "enmark": "gentle, easygoing, friendly"
+  },
+  "zh-m-011": {
+    "voice": "zh-CN-YunzeNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "口音、低沉、自信、正式",
+    "enname": "Chinese",
+    "enmark": "accented, deep, confident, formal"
+  },
+  "zh-m-012": {
+    "voice": "zh-CN-henan-YundengNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "河南、随和、友好、生动",
+    "enname": "Chinese",
+    "enmark": "Henan, easygoing, friendly, lively"
+  },
+  "zh-m-013": {
+    "voice": "zh-CN-shandong-YunxiangNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "山东、随和、生动、有力",
+    "enname": "Chinese",
+    "enmark": "Shandong, easygoing, lively, strong"
+  },
+  "zh-m-014": {
+    "voice": "zh-CN-sichuan-YunxiNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "四川、随和、生动、温柔",
+    "enname": "Chinese",
+    "enmark": "Sichuan, easygoing, lively, gentle"
+  },
+  "zh-m-015": {
+    "voice": "zh-HK-WanLungNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "港普、粤语、平静、正式",
+    "enname": "Chinese",
+    "enmark": "Hong Kong Putonghua, Cantonese, calm, formal"
+  },
+  "zh-m-016": {
+    "voice": "zh-TW-YunJheNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "中文",
+    "mark": "台湾、有感染力、温柔",
+    "enname": "Chinese",
+    "enmark": "Taiwan, engaging, gentle"
+  },
+  "en-f-001": {
+    "voice": "en-AU-AnnetteNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-002": {
+    "voice": "en-AU-CarlyNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "清脆、开朗、明亮",
+    "enname": "English",
+    "enmark": "crisp, cheerful, bright"
+  },
+  "en-f-003": {
+    "voice": "en-AU-ElsieNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-004": {
+    "voice": "en-AU-FreyaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-005": {
+    "voice": "en-AU-JoanneNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-006": {
+    "voice": "en-AU-KimNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-007": {
+    "voice": "en-AU-NatashaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "English",
+    "enmark": "crisp, bright, clear"
+  },
+  "en-f-008": {
+    "voice": "en-AU-TinaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-009": {
+    "voice": "en-CA-ClaraNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "English",
+    "enmark": "crisp, bright, clear"
+  },
+  "en-f-010": {
+    "voice": "en-GB-AbbiNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-011": {
+    "voice": "en-GB-AdaMultilingualNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "开朗、温暖、温柔、友好",
+    "enname": "English",
+    "enmark": "cheerful, warm, gentle, friendly"
+  },
+  "en-f-012": {
+    "voice": "en-GB-BellaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-013": {
+    "voice": "en-GB-HollieNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-014": {
+    "voice": "en-GB-LibbyNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "English",
+    "enmark": "crisp, bright, clear"
+  },
+  "en-f-015": {
+    "voice": "en-GB-MaisieNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "清脆、开朗、明亮",
+    "enname": "English",
+    "enmark": "crisp, cheerful, bright"
+  },
+  "en-f-016": {
+    "voice": "en-GB-MiaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-017": {
+    "voice": "en-GB-OliviaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-018": {
+    "voice": "en-GB-SoniaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "温柔、柔和",
+    "enname": "English",
+    "enmark": "gentle, 柔和"
+  },
+  "en-f-019": {
+    "voice": "en-HK-YanNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-020": {
+    "voice": "en-IE-EmilyNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-021": {
+    "voice": "en-IN-AartiIndicNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-022": {
+    "voice": "en-IN-AartiNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-023": {
+    "voice": "en-IN-AashiNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-024": {
+    "voice": "en-IN-AnanyaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-025": {
+    "voice": "en-IN-KavyaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-026": {
+    "voice": "en-IN-NeerjaIndicNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-027": {
+    "voice": "en-IN-NeerjaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-028": {
+    "voice": "en-KE-AsiliaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-029": {
+    "voice": "en-NG-EzinneNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-030": {
+    "voice": "en-NZ-MollyNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-031": {
+    "voice": "en-PH-RosaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-032": {
+    "voice": "en-SG-LunaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-033": {
+    "voice": "en-TZ-ImaniNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-034": {
+    "voice": "en-US-AmandaMultilingualNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "清晰、明亮、年轻感",
+    "enname": "English",
+    "enmark": "clear, bright, youthful"
+  },
+  "en-f-035": {
+    "voice": "en-US-AmberNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "俏皮、轻快、轻松",
+    "enname": "English",
+    "enmark": "俏皮, upbeat, relaxed"
+  },
+  "en-f-036": {
+    "voice": "en-US-AnaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "好奇、开朗、有感染力",
+    "enname": "English",
+    "enmark": "好奇, cheerful, engaging"
+  },
+  "en-f-037": {
+    "voice": "en-US-AriaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "English",
+    "enmark": "crisp, bright, clear"
+  },
+  "en-f-038": {
+    "voice": "en-US-AshleyNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "真诚、亲切、诚恳",
+    "enname": "English",
+    "enmark": "sincere, affectionate, 诚恳"
+  },
+  "en-f-039": {
+    "voice": "en-US-AvaMultilingualNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "讨喜、友好、关怀",
+    "enname": "English",
+    "enmark": "likable, friendly, 关怀"
+  },
+  "en-f-040": {
+    "voice": "en-US-AvaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "讨喜、关怀、友好",
+    "enname": "English",
+    "enmark": "likable, 关怀, friendly"
+  },
+  "en-f-041": {
+    "voice": "en-US-CoraMultilingualNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "富有同理心、正式、真诚",
+    "enname": "English",
+    "enmark": "empathetic, formal, sincere"
+  },
+  "en-f-042": {
+    "voice": "en-US-CoraNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "富有同理心、正式、真诚",
+    "enname": "English",
+    "enmark": "empathetic, formal, sincere"
+  },
+  "en-f-043": {
+    "voice": "en-US-ElizabethNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "权威、正式、严肃",
+    "enname": "English",
+    "enmark": "权威, formal, serious"
+  },
+  "en-f-044": {
+    "voice": "en-US-EmmaMultilingualNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "开朗、轻松、随和",
+    "enname": "English",
+    "enmark": "cheerful, relaxed, easygoing"
+  },
+  "en-f-045": {
+    "voice": "en-US-EmmaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "开朗、轻松、随和",
+    "enname": "English",
+    "enmark": "cheerful, relaxed, easygoing"
+  },
+  "en-f-046": {
+    "voice": "en-US-JaneNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "严肃、亲切、轻快",
+    "enname": "English",
+    "enmark": "serious, affectionate, upbeat"
+  },
+  "en-f-047": {
+    "voice": "en-US-JennyMultilingualNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "真诚、讨喜、亲切",
+    "enname": "English",
+    "enmark": "sincere, likable, affectionate"
+  },
+  "en-f-048": {
+    "voice": "en-US-JennyNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "真诚、讨喜、亲切",
+    "enname": "English",
+    "enmark": "sincere, likable, affectionate"
+  },
+  "en-f-049": {
+    "voice": "en-US-LolaMultilingualNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "真诚、平静、温暖",
+    "enname": "English",
+    "enmark": "sincere, calm, warm"
+  },
+  "en-f-050": {
+    "voice": "en-US-LunaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "真诚、讨喜、明亮、清晰、友好、温暖",
+    "enname": "English",
+    "enmark": "sincere, likable, bright, clear, friendly, warm"
+  },
+  "en-f-051": {
+    "voice": "en-US-MichelleNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "自信、真实、温暖",
+    "enname": "English",
+    "enmark": "confident, authentic, warm"
+  },
+  "en-f-052": {
+    "voice": "en-US-MonicaNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "成熟、真实、温暖",
+    "enname": "English",
+    "enmark": "成熟, authentic, warm"
+  },
+  "en-f-053": {
+    "voice": "en-US-NancyMultilingualNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "随和、年轻感、亲切",
+    "enname": "English",
+    "enmark": "easygoing, youthful, affectionate"
+  },
+  "en-f-054": {
+    "voice": "en-US-NancyNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "自信、严肃、成熟",
+    "enname": "English",
+    "enmark": "confident, serious, 成熟"
+  },
+  "en-f-055": {
+    "voice": "en-US-NovaTurboMultilingualNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "低沉、浑厚",
+    "enname": "English",
+    "enmark": "deep, rich"
+  },
+  "en-f-056": {
+    "voice": "en-US-PhoebeMultilingualNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "年轻感、轻快、自信",
+    "enname": "English",
+    "enmark": "youthful, upbeat, confident"
+  },
+  "en-f-057": {
+    "voice": "en-US-SaraNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "真诚、平静、自信",
+    "enname": "English",
+    "enmark": "sincere, calm, confident"
+  },
+  "en-f-058": {
+    "voice": "en-US-SerenaMultilingualNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "正式、自信、成熟",
+    "enname": "English",
+    "enmark": "formal, confident, 成熟"
+  },
+  "en-f-059": {
+    "voice": "en-US-ShimmerTurboMultilingualNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-f-060": {
+    "voice": "en-ZA-LeahNeural",
+    "lang": "en",
+    "gender": "female",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-001": {
+    "voice": "en-AU-DarrenNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-002": {
+    "voice": "en-AU-DuncanNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-003": {
+    "voice": "en-AU-KenNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-004": {
+    "voice": "en-AU-NeilNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-005": {
+    "voice": "en-AU-TimNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-006": {
+    "voice": "en-AU-WilliamMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "温暖、开朗、随和、友好、讨喜",
+    "enname": "English",
+    "enmark": "warm, cheerful, easygoing, friendly, likable"
+  },
+  "en-m-007": {
+    "voice": "en-AU-WilliamNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "有感染力、有力",
+    "enname": "English",
+    "enmark": "engaging, strong"
+  },
+  "en-m-008": {
+    "voice": "en-CA-LiamNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-009": {
+    "voice": "en-GB-AlfieNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-010": {
+    "voice": "en-GB-ElliotNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-011": {
+    "voice": "en-GB-EthanNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-012": {
+    "voice": "en-GB-NoahNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-013": {
+    "voice": "en-GB-OliverNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-014": {
+    "voice": "en-GB-OllieMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "温暖、开朗、随和、友好、讨喜",
+    "enname": "English",
+    "enmark": "warm, cheerful, easygoing, friendly, likable"
+  },
+  "en-m-015": {
+    "voice": "en-GB-RyanNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "明亮、有感染力",
+    "enname": "English",
+    "enmark": "bright, engaging"
+  },
+  "en-m-016": {
+    "voice": "en-GB-ThomasNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-017": {
+    "voice": "en-HK-SamNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-018": {
+    "voice": "en-IE-ConnorNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "轻松、俏皮、友好",
+    "enname": "English",
+    "enmark": "relaxed, 俏皮, friendly"
+  },
+  "en-m-019": {
+    "voice": "en-IN-AaravNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-020": {
+    "voice": "en-IN-ArjunIndicNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-021": {
+    "voice": "en-IN-ArjunNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-022": {
+    "voice": "en-IN-KunalNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-023": {
+    "voice": "en-IN-PrabhatIndicNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-024": {
+    "voice": "en-IN-PrabhatNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-025": {
+    "voice": "en-IN-RehaanNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-026": {
+    "voice": "en-KE-ChilembaNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-027": {
+    "voice": "en-NG-AbeoNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-028": {
+    "voice": "en-NZ-MitchellNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-029": {
+    "voice": "en-PH-JamesNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-030": {
+    "voice": "en-SG-WayneNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-031": {
+    "voice": "en-TZ-ElimuNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-032": {
+    "voice": "en-US-AdamMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "温暖、有感染力、低沉",
+    "enname": "English",
+    "enmark": "warm, engaging, deep"
+  },
+  "en-m-033": {
+    "voice": "en-US-AlloyTurboMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "多才多艺",
+    "enname": "English",
+    "enmark": "多才多艺"
+  },
+  "en-m-034": {
+    "voice": "en-US-AndrewMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "自信、随和、温暖",
+    "enname": "English",
+    "enmark": "confident, easygoing, warm"
+  },
+  "en-m-035": {
+    "voice": "en-US-AndrewNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "自信、真实、温暖",
+    "enname": "English",
+    "enmark": "confident, authentic, warm"
+  },
+  "en-m-036": {
+    "voice": "en-US-BrandonMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "温暖、有感染力、真实",
+    "enname": "English",
+    "enmark": "warm, engaging, authentic"
+  },
+  "en-m-037": {
+    "voice": "en-US-BrandonNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "温暖、有感染力、真实",
+    "enname": "English",
+    "enmark": "warm, engaging, authentic"
+  },
+  "en-m-038": {
+    "voice": "en-US-BrianMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "真诚、平静、亲切",
+    "enname": "English",
+    "enmark": "sincere, calm, affectionate"
+  },
+  "en-m-039": {
+    "voice": "en-US-BrianNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "真诚、平静、亲切",
+    "enname": "English",
+    "enmark": "sincere, calm, affectionate"
+  },
+  "en-m-040": {
+    "voice": "en-US-ChristopherMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "低沉、温暖",
+    "enname": "English",
+    "enmark": "deep, warm"
+  },
+  "en-m-041": {
+    "voice": "en-US-ChristopherNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "低沉、温暖",
+    "enname": "English",
+    "enmark": "deep, warm"
+  },
+  "en-m-042": {
+    "voice": "en-US-DavisMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "舒缓、平静、流畅",
+    "enname": "English",
+    "enmark": "soothing, calm, 流畅"
+  },
+  "en-m-043": {
+    "voice": "en-US-DavisNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "舒缓、平静、流畅",
+    "enname": "English",
+    "enmark": "soothing, calm, 流畅"
+  },
+  "en-m-044": {
+    "voice": "en-US-DerekMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "自信、博学、正式",
+    "enname": "English",
+    "enmark": "confident, knowledgeable, formal"
+  },
+  "en-m-045": {
+    "voice": "en-US-DustinMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "年轻感、清晰、体贴",
+    "enname": "English",
+    "enmark": "youthful, clear, considerate"
+  },
+  "en-m-046": {
+    "voice": "en-US-EchoTurboMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-047": {
+    "voice": "en-US-EricNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "自信、真诚、温暖",
+    "enname": "English",
+    "enmark": "confident, sincere, warm"
+  },
+  "en-m-048": {
+    "voice": "en-US-GuyNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "轻松、俏皮、友好",
+    "enname": "English",
+    "enmark": "relaxed, 俏皮, friendly"
+  },
+  "en-m-049": {
+    "voice": "en-US-JacobNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "真诚、正式、自信",
+    "enname": "English",
+    "enmark": "sincere, formal, confident"
+  },
+  "en-m-050": {
+    "voice": "en-US-JasonNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "温柔、害羞、礼貌",
+    "enname": "English",
+    "enmark": "gentle, shy, polite"
+  },
+  "en-m-051": {
+    "voice": "en-US-KaiNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "真诚、讨喜、明亮、清晰、友好、温暖",
+    "enname": "English",
+    "enmark": "sincere, likable, bright, clear, friendly, warm"
+  },
+  "en-m-052": {
+    "voice": "en-US-LewisMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "博学、正式、自信",
+    "enname": "English",
+    "enmark": "knowledgeable, formal, confident"
+  },
+  "en-m-053": {
+    "voice": "en-US-OnyxTurboMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "en-m-054": {
+    "voice": "en-US-RogerNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "严肃、正式、自信",
+    "enname": "English",
+    "enmark": "serious, formal, confident"
+  },
+  "en-m-055": {
+    "voice": "en-US-RyanMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "专业、真实、真诚",
+    "enname": "English",
+    "enmark": "专业, authentic, sincere"
+  },
+  "en-m-056": {
+    "voice": "en-US-SamuelMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "真诚、温暖、表达力强",
+    "enname": "English",
+    "enmark": "sincere, warm, expressive"
+  },
+  "en-m-057": {
+    "voice": "en-US-SteffanMultilingualNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "随和、体贴",
+    "enname": "English",
+    "enmark": "easygoing, considerate"
+  },
+  "en-m-058": {
+    "voice": "en-US-SteffanNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "成熟、真实、温暖",
+    "enname": "English",
+    "enmark": "成熟, authentic, warm"
+  },
+  "en-m-059": {
+    "voice": "en-US-TonyNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "体贴、真实、真诚",
+    "enname": "English",
+    "enmark": "considerate, authentic, sincere"
+  },
+  "en-m-060": {
+    "voice": "en-ZA-LukeNeural",
+    "lang": "en",
+    "gender": "male",
+    "zhname": "英语",
+    "mark": "",
+    "enname": "English",
+    "enmark": ""
+  },
+  "ja-f-001": {
+    "voice": "ja-JP-AoiNeural",
+    "lang": "ja",
+    "gender": "female",
+    "zhname": "日语",
+    "mark": "好奇、开朗",
+    "enname": "Japanese",
+    "enmark": "好奇, cheerful"
+  },
+  "ja-f-002": {
+    "voice": "ja-JP-MayuNeural",
+    "lang": "ja",
+    "gender": "female",
+    "zhname": "日语",
+    "mark": "生动、明亮",
+    "enname": "Japanese",
+    "enmark": "lively, bright"
+  },
+  "ja-f-003": {
+    "voice": "ja-JP-NanamiNeural",
+    "lang": "ja",
+    "gender": "female",
+    "zhname": "日语",
+    "mark": "明亮、开朗",
+    "enname": "Japanese",
+    "enmark": "bright, cheerful"
+  },
+  "ja-f-004": {
+    "voice": "ja-JP-ShioriNeural",
+    "lang": "ja",
+    "gender": "female",
+    "zhname": "日语",
+    "mark": "",
+    "enname": "Japanese",
+    "enmark": ""
+  },
+  "ja-m-001": {
+    "voice": "ja-JP-DaichiNeural",
+    "lang": "ja",
+    "gender": "male",
+    "zhname": "日语",
+    "mark": "",
+    "enname": "Japanese",
+    "enmark": ""
+  },
+  "ja-m-002": {
+    "voice": "ja-JP-KeitaNeural",
+    "lang": "ja",
+    "gender": "male",
+    "zhname": "日语",
+    "mark": "随和、有感染力",
+    "enname": "Japanese",
+    "enmark": "easygoing, engaging"
+  },
+  "ja-m-003": {
+    "voice": "ja-JP-NaokiNeural",
+    "lang": "ja",
+    "gender": "male",
+    "zhname": "日语",
+    "mark": "",
+    "enname": "Japanese",
+    "enmark": ""
+  },
+  "ko-f-001": {
+    "voice": "ko-KR-JiMinNeural",
+    "lang": "ko",
+    "gender": "female",
+    "zhname": "韩语",
+    "mark": "",
+    "enname": "Korean",
+    "enmark": ""
+  },
+  "ko-f-002": {
+    "voice": "ko-KR-SeoHyeonNeural",
+    "lang": "ko",
+    "gender": "female",
+    "zhname": "韩语",
+    "mark": "好奇、开朗",
+    "enname": "Korean",
+    "enmark": "好奇, cheerful"
+  },
+  "ko-f-003": {
+    "voice": "ko-KR-SoonBokNeural",
+    "lang": "ko",
+    "gender": "female",
+    "zhname": "韩语",
+    "mark": "生动、明亮",
+    "enname": "Korean",
+    "enmark": "lively, bright"
+  },
+  "ko-f-004": {
+    "voice": "ko-KR-SunHiNeural",
+    "lang": "ko",
+    "gender": "female",
+    "zhname": "韩语",
+    "mark": "自信、正式",
+    "enname": "Korean",
+    "enmark": "confident, formal"
+  },
+  "ko-f-005": {
+    "voice": "ko-KR-YuJinNeural",
+    "lang": "ko",
+    "gender": "female",
+    "zhname": "韩语",
+    "mark": "",
+    "enname": "Korean",
+    "enmark": ""
+  },
+  "ko-m-001": {
+    "voice": "ko-KR-BongJinNeural",
+    "lang": "ko",
+    "gender": "male",
+    "zhname": "韩语",
+    "mark": "",
+    "enname": "Korean",
+    "enmark": ""
+  },
+  "ko-m-002": {
+    "voice": "ko-KR-GookMinNeural",
+    "lang": "ko",
+    "gender": "male",
+    "zhname": "韩语",
+    "mark": "",
+    "enname": "Korean",
+    "enmark": ""
+  },
+  "ko-m-003": {
+    "voice": "ko-KR-HyunsuMultilingualNeural",
+    "lang": "ko",
+    "gender": "male",
+    "zhname": "韩语",
+    "mark": "正式、清晰、自信",
+    "enname": "Korean",
+    "enmark": "formal, clear, confident"
+  },
+  "ko-m-004": {
+    "voice": "ko-KR-HyunsuNeural",
+    "lang": "ko",
+    "gender": "male",
+    "zhname": "韩语",
+    "mark": "明亮、随和",
+    "enname": "Korean",
+    "enmark": "bright, easygoing"
+  },
+  "ko-m-005": {
+    "voice": "ko-KR-InJoonNeural",
+    "lang": "ko",
+    "gender": "male",
+    "zhname": "韩语",
+    "mark": "随和、友好",
+    "enname": "Korean",
+    "enmark": "easygoing, friendly"
+  },
+  "fr-f-001": {
+    "voice": "fr-BE-CharlineNeural",
+    "lang": "fr",
+    "gender": "female",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-f-002": {
+    "voice": "fr-CA-SylvieNeural",
+    "lang": "fr",
+    "gender": "female",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-f-003": {
+    "voice": "fr-CH-ArianeNeural",
+    "lang": "fr",
+    "gender": "female",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-f-004": {
+    "voice": "fr-FR-BrigitteNeural",
+    "lang": "fr",
+    "gender": "female",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-f-005": {
+    "voice": "fr-FR-CelesteNeural",
+    "lang": "fr",
+    "gender": "female",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-f-006": {
+    "voice": "fr-FR-CoralieNeural",
+    "lang": "fr",
+    "gender": "female",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-f-007": {
+    "voice": "fr-FR-DeniseNeural",
+    "lang": "fr",
+    "gender": "female",
+    "zhname": "法语",
+    "mark": "明亮、有感染力",
+    "enname": "French",
+    "enmark": "bright, engaging"
+  },
+  "fr-f-008": {
+    "voice": "fr-FR-EloiseNeural",
+    "lang": "fr",
+    "gender": "female",
+    "zhname": "法语",
+    "mark": "好奇、开朗",
+    "enname": "French",
+    "enmark": "好奇, cheerful"
+  },
+  "fr-f-009": {
+    "voice": "fr-FR-JacquelineNeural",
+    "lang": "fr",
+    "gender": "female",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-f-010": {
+    "voice": "fr-FR-JosephineNeural",
+    "lang": "fr",
+    "gender": "female",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-f-011": {
+    "voice": "fr-FR-VivienneMultilingualNeural",
+    "lang": "fr",
+    "gender": "female",
+    "zhname": "法语",
+    "mark": "温暖、随和",
+    "enname": "French",
+    "enmark": "warm, easygoing"
+  },
+  "fr-f-012": {
+    "voice": "fr-FR-YvetteNeural",
+    "lang": "fr",
+    "gender": "female",
+    "zhname": "法语",
+    "mark": "生动、明亮",
+    "enname": "French",
+    "enmark": "lively, bright"
+  },
+  "fr-m-001": {
+    "voice": "fr-BE-GerardNeural",
+    "lang": "fr",
+    "gender": "male",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-m-002": {
+    "voice": "fr-CA-AntoineNeural",
+    "lang": "fr",
+    "gender": "male",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-m-003": {
+    "voice": "fr-CA-JeanNeural",
+    "lang": "fr",
+    "gender": "male",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-m-004": {
+    "voice": "fr-CA-ThierryNeural",
+    "lang": "fr",
+    "gender": "male",
+    "zhname": "法语",
+    "mark": "有感染力、关怀",
+    "enname": "French",
+    "enmark": "engaging, 关怀"
+  },
+  "fr-m-005": {
+    "voice": "fr-CH-FabriceNeural",
+    "lang": "fr",
+    "gender": "male",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-m-006": {
+    "voice": "fr-FR-AlainNeural",
+    "lang": "fr",
+    "gender": "male",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-m-007": {
+    "voice": "fr-FR-ClaudeNeural",
+    "lang": "fr",
+    "gender": "male",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-m-008": {
+    "voice": "fr-FR-HenriNeural",
+    "lang": "fr",
+    "gender": "male",
+    "zhname": "法语",
+    "mark": "有力、平静",
+    "enname": "French",
+    "enmark": "strong, calm"
+  },
+  "fr-m-009": {
+    "voice": "fr-FR-JeromeNeural",
+    "lang": "fr",
+    "gender": "male",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-m-010": {
+    "voice": "fr-FR-LucienMultilingualNeural",
+    "lang": "fr",
+    "gender": "male",
+    "zhname": "法语",
+    "mark": "温暖、正式、自信",
+    "enname": "French",
+    "enmark": "warm, formal, confident"
+  },
+  "fr-m-011": {
+    "voice": "fr-FR-MauriceNeural",
+    "lang": "fr",
+    "gender": "male",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "fr-m-012": {
+    "voice": "fr-FR-RemyMultilingualNeural",
+    "lang": "fr",
+    "gender": "male",
+    "zhname": "法语",
+    "mark": "明亮、开朗",
+    "enname": "French",
+    "enmark": "bright, cheerful"
+  },
+  "fr-m-013": {
+    "voice": "fr-FR-YvesNeural",
+    "lang": "fr",
+    "gender": "male",
+    "zhname": "法语",
+    "mark": "",
+    "enname": "French",
+    "enmark": ""
+  },
+  "de-f-001": {
+    "voice": "de-AT-IngridNeural",
+    "lang": "de",
+    "gender": "female",
+    "zhname": "德语",
+    "mark": "",
+    "enname": "German",
+    "enmark": ""
+  },
+  "de-f-002": {
+    "voice": "de-CH-LeniNeural",
+    "lang": "de",
+    "gender": "female",
+    "zhname": "德语",
+    "mark": "",
+    "enname": "German",
+    "enmark": ""
+  },
+  "de-f-003": {
+    "voice": "de-DE-AmalaNeural",
+    "lang": "de",
+    "gender": "female",
+    "zhname": "德语",
+    "mark": "圆润、生动、明亮",
+    "enname": "German",
+    "enmark": "rounded, lively, bright"
+  },
+  "de-f-004": {
+    "voice": "de-DE-ElkeNeural",
+    "lang": "de",
+    "gender": "female",
+    "zhname": "德语",
+    "mark": "",
+    "enname": "German",
+    "enmark": ""
+  },
+  "de-f-005": {
+    "voice": "de-DE-GiselaNeural",
+    "lang": "de",
+    "gender": "female",
+    "zhname": "德语",
+    "mark": "清脆、开朗、明亮",
+    "enname": "German",
+    "enmark": "crisp, cheerful, bright"
+  },
+  "de-f-006": {
+    "voice": "de-DE-KatjaNeural",
+    "lang": "de",
+    "gender": "female",
+    "zhname": "德语",
+    "mark": "平静、讨喜",
+    "enname": "German",
+    "enmark": "calm, likable"
+  },
+  "de-f-007": {
+    "voice": "de-DE-KlarissaNeural",
+    "lang": "de",
+    "gender": "female",
+    "zhname": "德语",
+    "mark": "",
+    "enname": "German",
+    "enmark": ""
+  },
+  "de-f-008": {
+    "voice": "de-DE-LouisaNeural",
+    "lang": "de",
+    "gender": "female",
+    "zhname": "德语",
+    "mark": "",
+    "enname": "German",
+    "enmark": ""
+  },
+  "de-f-009": {
+    "voice": "de-DE-MajaNeural",
+    "lang": "de",
+    "gender": "female",
+    "zhname": "德语",
+    "mark": "",
+    "enname": "German",
+    "enmark": ""
+  },
+  "de-f-010": {
+    "voice": "de-DE-SeraphinaMultilingualNeural",
+    "lang": "de",
+    "gender": "female",
+    "zhname": "德语",
+    "mark": "随和、随和",
+    "enname": "German",
+    "enmark": "easygoing, easygoing"
+  },
+  "de-f-011": {
+    "voice": "de-DE-TanjaNeural",
+    "lang": "de",
+    "gender": "female",
+    "zhname": "德语",
+    "mark": "",
+    "enname": "German",
+    "enmark": ""
+  },
+  "de-m-001": {
+    "voice": "de-AT-JonasNeural",
+    "lang": "de",
+    "gender": "male",
+    "zhname": "德语",
+    "mark": "轻松、俏皮、友好",
+    "enname": "German",
+    "enmark": "relaxed, 俏皮, friendly"
+  },
+  "de-m-002": {
+    "voice": "de-CH-JanNeural",
+    "lang": "de",
+    "gender": "male",
+    "zhname": "德语",
+    "mark": "",
+    "enname": "German",
+    "enmark": ""
+  },
+  "de-m-003": {
+    "voice": "de-DE-BerndNeural",
+    "lang": "de",
+    "gender": "male",
+    "zhname": "德语",
+    "mark": "",
+    "enname": "German",
+    "enmark": ""
+  },
+  "de-m-004": {
+    "voice": "de-DE-ChristophNeural",
+    "lang": "de",
+    "gender": "male",
+    "zhname": "德语",
+    "mark": "",
+    "enname": "German",
+    "enmark": ""
+  },
+  "de-m-005": {
+    "voice": "de-DE-ConradNeural",
+    "lang": "de",
+    "gender": "male",
+    "zhname": "德语",
+    "mark": "有感染力、友好",
+    "enname": "German",
+    "enmark": "engaging, friendly"
+  },
+  "de-m-006": {
+    "voice": "de-DE-FlorianMultilingualNeural",
+    "lang": "de",
+    "gender": "male",
+    "zhname": "德语",
+    "mark": "开朗、温暖",
+    "enname": "German",
+    "enmark": "cheerful, warm"
+  },
+  "de-m-007": {
+    "voice": "de-DE-KasperNeural",
+    "lang": "de",
+    "gender": "male",
+    "zhname": "德语",
+    "mark": "",
+    "enname": "German",
+    "enmark": ""
+  },
+  "de-m-008": {
+    "voice": "de-DE-KillianNeural",
+    "lang": "de",
+    "gender": "male",
+    "zhname": "德语",
+    "mark": "",
+    "enname": "German",
+    "enmark": ""
+  },
+  "de-m-009": {
+    "voice": "de-DE-KlausNeural",
+    "lang": "de",
+    "gender": "male",
+    "zhname": "德语",
+    "mark": "",
+    "enname": "German",
+    "enmark": ""
+  },
+  "de-m-010": {
+    "voice": "de-DE-RalfNeural",
+    "lang": "de",
+    "gender": "male",
+    "zhname": "德语",
+    "mark": "",
+    "enname": "German",
+    "enmark": ""
+  },
+  "af-f-001": {
+    "voice": "af-ZA-AdriNeural",
+    "lang": "af",
+    "gender": "female",
+    "zhname": "南非语",
+    "mark": "圆润、生动、明亮",
+    "enname": "Afrikaans",
+    "enmark": "rounded, lively, bright"
+  },
+  "af-m-001": {
+    "voice": "af-ZA-WillemNeural",
+    "lang": "af",
+    "gender": "male",
+    "zhname": "南非语",
+    "mark": "",
+    "enname": "Afrikaans",
+    "enmark": ""
+  },
+  "am-f-001": {
+    "voice": "am-ET-MekdesNeural",
+    "lang": "am",
+    "gender": "female",
+    "zhname": "阿姆哈拉语",
+    "mark": "",
+    "enname": "Amharic",
+    "enmark": ""
+  },
+  "am-m-001": {
+    "voice": "am-ET-AmehaNeural",
+    "lang": "am",
+    "gender": "male",
+    "zhname": "阿姆哈拉语",
+    "mark": "",
+    "enname": "Amharic",
+    "enmark": ""
+  },
+  "ar-f-001": {
+    "voice": "ar-AE-FatimaNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "Arabic",
+    "enmark": "crisp, bright, clear"
+  },
+  "ar-f-002": {
+    "voice": "ar-BH-LailaNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-f-003": {
+    "voice": "ar-DZ-AminaNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "Arabic",
+    "enmark": "crisp, bright, clear"
+  },
+  "ar-f-004": {
+    "voice": "ar-EG-SalmaNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "Arabic",
+    "enmark": "crisp, bright, clear"
+  },
+  "ar-f-005": {
+    "voice": "ar-IQ-RanaNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-f-006": {
+    "voice": "ar-JO-SanaNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-f-007": {
+    "voice": "ar-KW-NouraNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "Arabic",
+    "enmark": "crisp, bright, clear"
+  },
+  "ar-f-008": {
+    "voice": "ar-LB-LaylaNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-f-009": {
+    "voice": "ar-LY-ImanNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-f-010": {
+    "voice": "ar-MA-MounaNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "Arabic",
+    "enmark": "crisp, bright, clear"
+  },
+  "ar-f-011": {
+    "voice": "ar-OM-AyshaNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "真诚、讨喜",
+    "enname": "Arabic",
+    "enmark": "sincere, likable"
+  },
+  "ar-f-012": {
+    "voice": "ar-QA-AmalNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-f-013": {
+    "voice": "ar-SA-ZariyahNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "Arabic",
+    "enmark": "crisp, bright, clear"
+  },
+  "ar-f-014": {
+    "voice": "ar-SY-AmanyNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "真诚、讨喜",
+    "enname": "Arabic",
+    "enmark": "sincere, likable"
+  },
+  "ar-f-015": {
+    "voice": "ar-TN-ReemNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "真诚、讨喜",
+    "enname": "Arabic",
+    "enmark": "sincere, likable"
+  },
+  "ar-f-016": {
+    "voice": "ar-YE-MaryamNeural",
+    "lang": "ar",
+    "gender": "female",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-001": {
+    "voice": "ar-AE-HamdanNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-002": {
+    "voice": "ar-BH-AliNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-003": {
+    "voice": "ar-DZ-IsmaelNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-004": {
+    "voice": "ar-EG-ShakirNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-005": {
+    "voice": "ar-IQ-BasselNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-006": {
+    "voice": "ar-JO-TaimNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-007": {
+    "voice": "ar-KW-FahedNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-008": {
+    "voice": "ar-LB-RamiNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-009": {
+    "voice": "ar-LY-OmarNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-010": {
+    "voice": "ar-MA-JamalNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-011": {
+    "voice": "ar-OM-AbdullahNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-012": {
+    "voice": "ar-QA-MoazNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-013": {
+    "voice": "ar-SA-HamedNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-014": {
+    "voice": "ar-SY-LaithNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-015": {
+    "voice": "ar-TN-HediNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "ar-m-016": {
+    "voice": "ar-YE-SalehNeural",
+    "lang": "ar",
+    "gender": "male",
+    "zhname": "阿拉伯语",
+    "mark": "",
+    "enname": "Arabic",
+    "enmark": ""
+  },
+  "as-f-001": {
+    "voice": "as-IN-YashicaNeural",
+    "lang": "as",
+    "gender": "female",
+    "zhname": "阿萨姆语",
+    "mark": "",
+    "enname": "Assamese",
+    "enmark": ""
+  },
+  "as-m-001": {
+    "voice": "as-IN-PriyomNeural",
+    "lang": "as",
+    "gender": "male",
+    "zhname": "阿萨姆语",
+    "mark": "",
+    "enname": "Assamese",
+    "enmark": ""
+  },
+  "az-f-001": {
+    "voice": "az-AZ-BanuNeural",
+    "lang": "az",
+    "gender": "female",
+    "zhname": "阿塞拜疆语",
+    "mark": "",
+    "enname": "Azerbaijani",
+    "enmark": ""
+  },
+  "az-m-001": {
+    "voice": "az-AZ-BabekNeural",
+    "lang": "az",
+    "gender": "male",
+    "zhname": "阿塞拜疆语",
+    "mark": "",
+    "enname": "Azerbaijani",
+    "enmark": ""
+  },
+  "bg-f-001": {
+    "voice": "bg-BG-KalinaNeural",
+    "lang": "bg",
+    "gender": "female",
+    "zhname": "保加利亚语",
+    "mark": "",
+    "enname": "Bulgarian",
+    "enmark": ""
+  },
+  "bg-m-001": {
+    "voice": "bg-BG-BorislavNeural",
+    "lang": "bg",
+    "gender": "male",
+    "zhname": "保加利亚语",
+    "mark": "轻松、俏皮、友好",
+    "enname": "Bulgarian",
+    "enmark": "relaxed, 俏皮, friendly"
+  },
+  "bn-f-001": {
+    "voice": "bn-BD-NabanitaNeural",
+    "lang": "bn",
+    "gender": "female",
+    "zhname": "孟加拉语",
+    "mark": "",
+    "enname": "Bengali",
+    "enmark": ""
+  },
+  "bn-f-002": {
+    "voice": "bn-IN-TanishaaNeural",
+    "lang": "bn",
+    "gender": "female",
+    "zhname": "孟加拉语",
+    "mark": "",
+    "enname": "Bengali",
+    "enmark": ""
+  },
+  "bn-m-001": {
+    "voice": "bn-BD-PradeepNeural",
+    "lang": "bn",
+    "gender": "male",
+    "zhname": "孟加拉语",
+    "mark": "",
+    "enname": "Bengali",
+    "enmark": ""
+  },
+  "bn-m-002": {
+    "voice": "bn-IN-BashkarNeural",
+    "lang": "bn",
+    "gender": "male",
+    "zhname": "孟加拉语",
+    "mark": "",
+    "enname": "Bengali",
+    "enmark": ""
+  },
+  "bs-f-001": {
+    "voice": "bs-BA-VesnaNeural",
+    "lang": "bs",
+    "gender": "female",
+    "zhname": "波斯尼亚语",
+    "mark": "",
+    "enname": "Bosnian",
+    "enmark": ""
+  },
+  "bs-m-001": {
+    "voice": "bs-BA-GoranNeural",
+    "lang": "bs",
+    "gender": "male",
+    "zhname": "波斯尼亚语",
+    "mark": "",
+    "enname": "Bosnian",
+    "enmark": ""
+  },
+  "ca-f-001": {
+    "voice": "ca-ES-AlbaNeural",
+    "lang": "ca",
+    "gender": "female",
+    "zhname": "加泰罗尼亚语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "Catalan",
+    "enmark": "crisp, bright, clear"
+  },
+  "ca-f-002": {
+    "voice": "ca-ES-JoanaNeural",
+    "lang": "ca",
+    "gender": "female",
+    "zhname": "加泰罗尼亚语",
+    "mark": "",
+    "enname": "Catalan",
+    "enmark": ""
+  },
+  "ca-m-001": {
+    "voice": "ca-ES-EnricNeural",
+    "lang": "ca",
+    "gender": "male",
+    "zhname": "加泰罗尼亚语",
+    "mark": "",
+    "enname": "Catalan",
+    "enmark": ""
+  },
+  "cs-f-001": {
+    "voice": "cs-CZ-VlastaNeural",
+    "lang": "cs",
+    "gender": "female",
+    "zhname": "捷克语",
+    "mark": "",
+    "enname": "Czech",
+    "enmark": ""
+  },
+  "cs-m-001": {
+    "voice": "cs-CZ-AntoninNeural",
+    "lang": "cs",
+    "gender": "male",
+    "zhname": "捷克语",
+    "mark": "",
+    "enname": "Czech",
+    "enmark": ""
+  },
+  "cy-f-001": {
+    "voice": "cy-GB-NiaNeural",
+    "lang": "cy",
+    "gender": "female",
+    "zhname": "威尔士语",
+    "mark": "",
+    "enname": "Welsh",
+    "enmark": ""
+  },
+  "cy-m-001": {
+    "voice": "cy-GB-AledNeural",
+    "lang": "cy",
+    "gender": "male",
+    "zhname": "威尔士语",
+    "mark": "",
+    "enname": "Welsh",
+    "enmark": ""
+  },
+  "da-f-001": {
+    "voice": "da-DK-ChristelNeural",
+    "lang": "da",
+    "gender": "female",
+    "zhname": "丹麦语",
+    "mark": "",
+    "enname": "Danish",
+    "enmark": ""
+  },
+  "da-m-001": {
+    "voice": "da-DK-JeppeNeural",
+    "lang": "da",
+    "gender": "male",
+    "zhname": "丹麦语",
+    "mark": "",
+    "enname": "Danish",
+    "enmark": ""
+  },
+  "el-f-001": {
+    "voice": "el-GR-AthinaNeural",
+    "lang": "el",
+    "gender": "female",
+    "zhname": "希腊语",
+    "mark": "",
+    "enname": "Greek",
+    "enmark": ""
+  },
+  "el-m-001": {
+    "voice": "el-GR-NestorasNeural",
+    "lang": "el",
+    "gender": "male",
+    "zhname": "希腊语",
+    "mark": "",
+    "enname": "Greek",
+    "enmark": ""
+  },
+  "es-f-001": {
+    "voice": "es-AR-ElenaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "明亮、清晰",
+    "enname": "Spanish",
+    "enmark": "bright, clear"
+  },
+  "es-f-002": {
+    "voice": "es-BO-SofiaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-003": {
+    "voice": "es-CL-CatalinaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-004": {
+    "voice": "es-CO-SalomeNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-005": {
+    "voice": "es-CR-MariaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-006": {
+    "voice": "es-CU-BelkysNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-007": {
+    "voice": "es-DO-RamonaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-008": {
+    "voice": "es-EC-AndreaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-009": {
+    "voice": "es-ES-AbrilNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-010": {
+    "voice": "es-ES-ArabellaMultilingualNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "开朗、友好、随和、温暖、讨喜",
+    "enname": "Spanish",
+    "enmark": "cheerful, friendly, easygoing, warm, likable"
+  },
+  "es-f-011": {
+    "voice": "es-ES-ElviraNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "明亮、清晰",
+    "enname": "Spanish",
+    "enmark": "bright, clear"
+  },
+  "es-f-012": {
+    "voice": "es-ES-EstrellaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-013": {
+    "voice": "es-ES-IreneNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "好奇、开朗",
+    "enname": "Spanish",
+    "enmark": "好奇, cheerful"
+  },
+  "es-f-014": {
+    "voice": "es-ES-IsidoraMultilingualNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "开朗、友好、温暖、随和",
+    "enname": "Spanish",
+    "enmark": "cheerful, friendly, warm, easygoing"
+  },
+  "es-f-015": {
+    "voice": "es-ES-LaiaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-016": {
+    "voice": "es-ES-LiaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "生动、明亮",
+    "enname": "Spanish",
+    "enmark": "lively, bright"
+  },
+  "es-f-017": {
+    "voice": "es-ES-TrianaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-018": {
+    "voice": "es-ES-VeraNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-019": {
+    "voice": "es-ES-XimenaMultilingualNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "正式、严肃、轻快",
+    "enname": "Spanish",
+    "enmark": "formal, serious, upbeat"
+  },
+  "es-f-020": {
+    "voice": "es-ES-XimenaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "清脆、开朗",
+    "enname": "Spanish",
+    "enmark": "crisp, cheerful"
+  },
+  "es-f-021": {
+    "voice": "es-GQ-TeresaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-022": {
+    "voice": "es-GT-MartaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-023": {
+    "voice": "es-HN-KarlaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-024": {
+    "voice": "es-MX-BeatrizNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-025": {
+    "voice": "es-MX-CandelaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-026": {
+    "voice": "es-MX-CarlotaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-027": {
+    "voice": "es-MX-DaliaMultilingualNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "温暖、开朗、随和、友好、讨喜",
+    "enname": "Spanish",
+    "enmark": "warm, cheerful, easygoing, friendly, likable"
+  },
+  "es-f-028": {
+    "voice": "es-MX-DaliaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "明亮、轻快",
+    "enname": "Spanish",
+    "enmark": "bright, upbeat"
+  },
+  "es-f-029": {
+    "voice": "es-MX-LarissaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-030": {
+    "voice": "es-MX-MarinaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "好奇、开朗",
+    "enname": "Spanish",
+    "enmark": "好奇, cheerful"
+  },
+  "es-f-031": {
+    "voice": "es-MX-NuriaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-032": {
+    "voice": "es-MX-RenataNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-033": {
+    "voice": "es-NI-YolandaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-034": {
+    "voice": "es-PA-MargaritaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-035": {
+    "voice": "es-PE-CamilaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-036": {
+    "voice": "es-PR-KarinaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-037": {
+    "voice": "es-PY-TaniaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-038": {
+    "voice": "es-SV-LorenaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-039": {
+    "voice": "es-US-PalomaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-040": {
+    "voice": "es-UY-ValentinaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-f-041": {
+    "voice": "es-VE-PaolaNeural",
+    "lang": "es",
+    "gender": "female",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-001": {
+    "voice": "es-AR-TomasNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-002": {
+    "voice": "es-BO-MarceloNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-003": {
+    "voice": "es-CL-LorenzoNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-004": {
+    "voice": "es-CO-GonzaloNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-005": {
+    "voice": "es-CR-JuanNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-006": {
+    "voice": "es-CU-ManuelNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-007": {
+    "voice": "es-DO-EmilioNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-008": {
+    "voice": "es-EC-LuisNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-009": {
+    "voice": "es-ES-AlvaroNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "自信、生动",
+    "enname": "Spanish",
+    "enmark": "confident, lively"
+  },
+  "es-m-010": {
+    "voice": "es-ES-ArnauNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-011": {
+    "voice": "es-ES-DarioNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-012": {
+    "voice": "es-ES-EliasNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-013": {
+    "voice": "es-ES-NilNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-014": {
+    "voice": "es-ES-SaulNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-015": {
+    "voice": "es-ES-TeoNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-016": {
+    "voice": "es-ES-TristanMultilingualNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "正式、清晰、trusthworthy",
+    "enname": "Spanish",
+    "enmark": "formal, clear, trusthworthy"
+  },
+  "es-m-017": {
+    "voice": "es-GQ-JavierNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-018": {
+    "voice": "es-GT-AndresNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-019": {
+    "voice": "es-HN-CarlosNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-020": {
+    "voice": "es-MX-CecilioNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-021": {
+    "voice": "es-MX-GerardoNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-022": {
+    "voice": "es-MX-JorgeMultilingualNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "温暖、开朗、随和、友好、讨喜",
+    "enname": "Spanish",
+    "enmark": "warm, cheerful, easygoing, friendly, likable"
+  },
+  "es-m-023": {
+    "voice": "es-MX-JorgeNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "好奇、低沉、自信",
+    "enname": "Spanish",
+    "enmark": "好奇, deep, confident"
+  },
+  "es-m-024": {
+    "voice": "es-MX-LibertoNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-025": {
+    "voice": "es-MX-LucianoNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-026": {
+    "voice": "es-MX-PelayoNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-027": {
+    "voice": "es-MX-YagoNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-028": {
+    "voice": "es-NI-FedericoNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-029": {
+    "voice": "es-PA-RobertoNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-030": {
+    "voice": "es-PE-AlexNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-031": {
+    "voice": "es-PR-VictorNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-032": {
+    "voice": "es-PY-MarioNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-033": {
+    "voice": "es-SV-RodrigoNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-034": {
+    "voice": "es-US-AlonsoNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-035": {
+    "voice": "es-UY-MateoNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "es-m-036": {
+    "voice": "es-VE-SebastianNeural",
+    "lang": "es",
+    "gender": "male",
+    "zhname": "西班牙语",
+    "mark": "",
+    "enname": "Spanish",
+    "enmark": ""
+  },
+  "et-f-001": {
+    "voice": "et-EE-AnuNeural",
+    "lang": "et",
+    "gender": "female",
+    "zhname": "爱沙尼亚语",
+    "mark": "",
+    "enname": "Estonian",
+    "enmark": ""
+  },
+  "et-m-001": {
+    "voice": "et-EE-KertNeural",
+    "lang": "et",
+    "gender": "male",
+    "zhname": "爱沙尼亚语",
+    "mark": "",
+    "enname": "Estonian",
+    "enmark": ""
+  },
+  "eu-f-001": {
+    "voice": "eu-ES-AinhoaNeural",
+    "lang": "eu",
+    "gender": "female",
+    "zhname": "巴斯克语",
+    "mark": "",
+    "enname": "Basque",
+    "enmark": ""
+  },
+  "eu-m-001": {
+    "voice": "eu-ES-AnderNeural",
+    "lang": "eu",
+    "gender": "male",
+    "zhname": "巴斯克语",
+    "mark": "",
+    "enname": "Basque",
+    "enmark": ""
+  },
+  "fa-f-001": {
+    "voice": "fa-IR-DilaraNeural",
+    "lang": "fa",
+    "gender": "female",
+    "zhname": "波斯语",
+    "mark": "",
+    "enname": "Persian",
+    "enmark": ""
+  },
+  "fa-m-001": {
+    "voice": "fa-IR-FaridNeural",
+    "lang": "fa",
+    "gender": "male",
+    "zhname": "波斯语",
+    "mark": "",
+    "enname": "Persian",
+    "enmark": ""
+  },
+  "fi-f-001": {
+    "voice": "fi-FI-NooraNeural",
+    "lang": "fi",
+    "gender": "female",
+    "zhname": "芬兰语",
+    "mark": "明亮、清晰",
+    "enname": "Finnish",
+    "enmark": "bright, clear"
+  },
+  "fi-f-002": {
+    "voice": "fi-FI-SelmaNeural",
+    "lang": "fi",
+    "gender": "female",
+    "zhname": "芬兰语",
+    "mark": "",
+    "enname": "Finnish",
+    "enmark": ""
+  },
+  "fi-m-001": {
+    "voice": "fi-FI-HarriNeural",
+    "lang": "fi",
+    "gender": "male",
+    "zhname": "芬兰语",
+    "mark": "",
+    "enname": "Finnish",
+    "enmark": ""
+  },
+  "fil-f-001": {
+    "voice": "fil-PH-BlessicaNeural",
+    "lang": "fil",
+    "gender": "female",
+    "zhname": "菲律宾语",
+    "mark": "",
+    "enname": "Filipino",
+    "enmark": ""
+  },
+  "fil-m-001": {
+    "voice": "fil-PH-AngeloNeural",
+    "lang": "fil",
+    "gender": "male",
+    "zhname": "菲律宾语",
+    "mark": "",
+    "enname": "Filipino",
+    "enmark": ""
+  },
+  "ga-f-001": {
+    "voice": "ga-IE-OrlaNeural",
+    "lang": "ga",
+    "gender": "female",
+    "zhname": "爱尔兰语",
+    "mark": "",
+    "enname": "Irish",
+    "enmark": ""
+  },
+  "ga-m-001": {
+    "voice": "ga-IE-ColmNeural",
+    "lang": "ga",
+    "gender": "male",
+    "zhname": "爱尔兰语",
+    "mark": "",
+    "enname": "Irish",
+    "enmark": ""
+  },
+  "gl-f-001": {
+    "voice": "gl-ES-SabelaNeural",
+    "lang": "gl",
+    "gender": "female",
+    "zhname": "加利西亚语",
+    "mark": "",
+    "enname": "Galician",
+    "enmark": ""
+  },
+  "gl-m-001": {
+    "voice": "gl-ES-RoiNeural",
+    "lang": "gl",
+    "gender": "male",
+    "zhname": "加利西亚语",
+    "mark": "",
+    "enname": "Galician",
+    "enmark": ""
+  },
+  "gu-f-001": {
+    "voice": "gu-IN-DhwaniNeural",
+    "lang": "gu",
+    "gender": "female",
+    "zhname": "古吉拉特语",
+    "mark": "",
+    "enname": "Gujarati",
+    "enmark": ""
+  },
+  "gu-m-001": {
+    "voice": "gu-IN-NiranjanNeural",
+    "lang": "gu",
+    "gender": "male",
+    "zhname": "古吉拉特语",
+    "mark": "",
+    "enname": "Gujarati",
+    "enmark": ""
+  },
+  "he-f-001": {
+    "voice": "he-IL-HilaNeural",
+    "lang": "he",
+    "gender": "female",
+    "zhname": "希伯来语",
+    "mark": "",
+    "enname": "Hebrew",
+    "enmark": ""
+  },
+  "he-m-001": {
+    "voice": "he-IL-AvriNeural",
+    "lang": "he",
+    "gender": "male",
+    "zhname": "希伯来语",
+    "mark": "",
+    "enname": "Hebrew",
+    "enmark": ""
+  },
+  "hi-f-001": {
+    "voice": "hi-IN-AartiNeural",
+    "lang": "hi",
+    "gender": "female",
+    "zhname": "印地语",
+    "mark": "",
+    "enname": "Hindi",
+    "enmark": ""
+  },
+  "hi-f-002": {
+    "voice": "hi-IN-AnanyaNeural",
+    "lang": "hi",
+    "gender": "female",
+    "zhname": "印地语",
+    "mark": "",
+    "enname": "Hindi",
+    "enmark": ""
+  },
+  "hi-f-003": {
+    "voice": "hi-IN-KavyaNeural",
+    "lang": "hi",
+    "gender": "female",
+    "zhname": "印地语",
+    "mark": "",
+    "enname": "Hindi",
+    "enmark": ""
+  },
+  "hi-f-004": {
+    "voice": "hi-IN-SwaraNeural",
+    "lang": "hi",
+    "gender": "female",
+    "zhname": "印地语",
+    "mark": "",
+    "enname": "Hindi",
+    "enmark": ""
+  },
+  "hi-m-001": {
+    "voice": "hi-IN-AaravNeural",
+    "lang": "hi",
+    "gender": "male",
+    "zhname": "印地语",
+    "mark": "",
+    "enname": "Hindi",
+    "enmark": ""
+  },
+  "hi-m-002": {
+    "voice": "hi-IN-ArjunNeural",
+    "lang": "hi",
+    "gender": "male",
+    "zhname": "印地语",
+    "mark": "",
+    "enname": "Hindi",
+    "enmark": ""
+  },
+  "hi-m-003": {
+    "voice": "hi-IN-KunalNeural",
+    "lang": "hi",
+    "gender": "male",
+    "zhname": "印地语",
+    "mark": "",
+    "enname": "Hindi",
+    "enmark": ""
+  },
+  "hi-m-004": {
+    "voice": "hi-IN-MadhurNeural",
+    "lang": "hi",
+    "gender": "male",
+    "zhname": "印地语",
+    "mark": "",
+    "enname": "Hindi",
+    "enmark": ""
+  },
+  "hi-m-005": {
+    "voice": "hi-IN-RehaanNeural",
+    "lang": "hi",
+    "gender": "male",
+    "zhname": "印地语",
+    "mark": "",
+    "enname": "Hindi",
+    "enmark": ""
+  },
+  "hr-f-001": {
+    "voice": "hr-HR-GabrijelaNeural",
+    "lang": "hr",
+    "gender": "female",
+    "zhname": "克罗地亚语",
+    "mark": "",
+    "enname": "Croatian",
+    "enmark": ""
+  },
+  "hr-m-001": {
+    "voice": "hr-HR-SreckoNeural",
+    "lang": "hr",
+    "gender": "male",
+    "zhname": "克罗地亚语",
+    "mark": "俏皮、友好",
+    "enname": "Croatian",
+    "enmark": "俏皮, friendly"
+  },
+  "hu-f-001": {
+    "voice": "hu-HU-NoemiNeural",
+    "lang": "hu",
+    "gender": "female",
+    "zhname": "匈牙利语",
+    "mark": "",
+    "enname": "Hungarian",
+    "enmark": ""
+  },
+  "hu-m-001": {
+    "voice": "hu-HU-TamasNeural",
+    "lang": "hu",
+    "gender": "male",
+    "zhname": "匈牙利语",
+    "mark": "俏皮、友好",
+    "enname": "Hungarian",
+    "enmark": "俏皮, friendly"
+  },
+  "hy-f-001": {
+    "voice": "hy-AM-AnahitNeural",
+    "lang": "hy",
+    "gender": "female",
+    "zhname": "亚美尼亚语",
+    "mark": "",
+    "enname": "Armenian",
+    "enmark": ""
+  },
+  "hy-m-001": {
+    "voice": "hy-AM-HaykNeural",
+    "lang": "hy",
+    "gender": "male",
+    "zhname": "亚美尼亚语",
+    "mark": "",
+    "enname": "Armenian",
+    "enmark": ""
+  },
+  "id-f-001": {
+    "voice": "id-ID-GadisNeural",
+    "lang": "id",
+    "gender": "female",
+    "zhname": "印度尼西亚语",
+    "mark": "",
+    "enname": "Indonesian",
+    "enmark": ""
+  },
+  "id-m-001": {
+    "voice": "id-ID-ArdiNeural",
+    "lang": "id",
+    "gender": "male",
+    "zhname": "印度尼西亚语",
+    "mark": "",
+    "enname": "Indonesian",
+    "enmark": ""
+  },
+  "is-f-001": {
+    "voice": "is-IS-GudrunNeural",
+    "lang": "is",
+    "gender": "female",
+    "zhname": "冰岛语",
+    "mark": "",
+    "enname": "Icelandic",
+    "enmark": ""
+  },
+  "is-m-001": {
+    "voice": "is-IS-GunnarNeural",
+    "lang": "is",
+    "gender": "male",
+    "zhname": "冰岛语",
+    "mark": "",
+    "enname": "Icelandic",
+    "enmark": ""
+  },
+  "it-f-001": {
+    "voice": "it-IT-ElsaNeural",
+    "lang": "it",
+    "gender": "female",
+    "zhname": "意大利语",
+    "mark": "自信、清脆",
+    "enname": "Italian",
+    "enmark": "confident, crisp"
+  },
+  "it-f-002": {
+    "voice": "it-IT-FabiolaNeural",
+    "lang": "it",
+    "gender": "female",
+    "zhname": "意大利语",
+    "mark": "",
+    "enname": "Italian",
+    "enmark": ""
+  },
+  "it-f-003": {
+    "voice": "it-IT-FiammaNeural",
+    "lang": "it",
+    "gender": "female",
+    "zhname": "意大利语",
+    "mark": "",
+    "enname": "Italian",
+    "enmark": ""
+  },
+  "it-f-004": {
+    "voice": "it-IT-ImeldaNeural",
+    "lang": "it",
+    "gender": "female",
+    "zhname": "意大利语",
+    "mark": "",
+    "enname": "Italian",
+    "enmark": ""
+  },
+  "it-f-005": {
+    "voice": "it-IT-IrmaNeural",
+    "lang": "it",
+    "gender": "female",
+    "zhname": "意大利语",
+    "mark": "",
+    "enname": "Italian",
+    "enmark": ""
+  },
+  "it-f-006": {
+    "voice": "it-IT-IsabellaMultilingualNeural",
+    "lang": "it",
+    "gender": "female",
+    "zhname": "意大利语",
+    "mark": "温暖、开朗、随和、友好、讨喜",
+    "enname": "Italian",
+    "enmark": "warm, cheerful, easygoing, friendly, likable"
+  },
+  "it-f-007": {
+    "voice": "it-IT-IsabellaNeural",
+    "lang": "it",
+    "gender": "female",
+    "zhname": "意大利语",
+    "mark": "轻快、明亮",
+    "enname": "Italian",
+    "enmark": "upbeat, bright"
+  },
+  "it-f-008": {
+    "voice": "it-IT-PalmiraNeural",
+    "lang": "it",
+    "gender": "female",
+    "zhname": "意大利语",
+    "mark": "生动、明亮",
+    "enname": "Italian",
+    "enmark": "lively, bright"
+  },
+  "it-f-009": {
+    "voice": "it-IT-PierinaNeural",
+    "lang": "it",
+    "gender": "female",
+    "zhname": "意大利语",
+    "mark": "好奇、开朗",
+    "enname": "Italian",
+    "enmark": "好奇, cheerful"
+  },
+  "it-m-001": {
+    "voice": "it-IT-AlessioMultilingualNeural",
+    "lang": "it",
+    "gender": "male",
+    "zhname": "意大利语",
+    "mark": "开朗、温暖、温柔、开朗、友好",
+    "enname": "Italian",
+    "enmark": "cheerful, warm, gentle, cheerful, friendly"
+  },
+  "it-m-002": {
+    "voice": "it-IT-BenignoNeural",
+    "lang": "it",
+    "gender": "male",
+    "zhname": "意大利语",
+    "mark": "",
+    "enname": "Italian",
+    "enmark": ""
+  },
+  "it-m-003": {
+    "voice": "it-IT-CalimeroNeural",
+    "lang": "it",
+    "gender": "male",
+    "zhname": "意大利语",
+    "mark": "",
+    "enname": "Italian",
+    "enmark": ""
+  },
+  "it-m-004": {
+    "voice": "it-IT-CataldoNeural",
+    "lang": "it",
+    "gender": "male",
+    "zhname": "意大利语",
+    "mark": "",
+    "enname": "Italian",
+    "enmark": ""
+  },
+  "it-m-005": {
+    "voice": "it-IT-DiegoNeural",
+    "lang": "it",
+    "gender": "male",
+    "zhname": "意大利语",
+    "mark": "生动、轻快",
+    "enname": "Italian",
+    "enmark": "lively, upbeat"
+  },
+  "it-m-006": {
+    "voice": "it-IT-GianniNeural",
+    "lang": "it",
+    "gender": "male",
+    "zhname": "意大利语",
+    "mark": "",
+    "enname": "Italian",
+    "enmark": ""
+  },
+  "it-m-007": {
+    "voice": "it-IT-GiuseppeMultilingualNeural",
+    "lang": "it",
+    "gender": "male",
+    "zhname": "意大利语",
+    "mark": "表达力强、轻快、年轻感",
+    "enname": "Italian",
+    "enmark": "expressive, upbeat, youthful"
+  },
+  "it-m-008": {
+    "voice": "it-IT-GiuseppeNeural",
+    "lang": "it",
+    "gender": "male",
+    "zhname": "意大利语",
+    "mark": "明亮、温暖",
+    "enname": "Italian",
+    "enmark": "bright, warm"
+  },
+  "it-m-009": {
+    "voice": "it-IT-LisandroNeural",
+    "lang": "it",
+    "gender": "male",
+    "zhname": "意大利语",
+    "mark": "",
+    "enname": "Italian",
+    "enmark": ""
+  },
+  "it-m-010": {
+    "voice": "it-IT-MarcelloMultilingualNeural",
+    "lang": "it",
+    "gender": "male",
+    "zhname": "意大利语",
+    "mark": "开朗、友好、随和、温暖、讨喜",
+    "enname": "Italian",
+    "enmark": "cheerful, friendly, easygoing, warm, likable"
+  },
+  "it-m-011": {
+    "voice": "it-IT-RinaldoNeural",
+    "lang": "it",
+    "gender": "male",
+    "zhname": "意大利语",
+    "mark": "",
+    "enname": "Italian",
+    "enmark": ""
+  },
+  "iu-f-001": {
+    "voice": "iu-Cans-CA-SiqiniqNeural",
+    "lang": "iu",
+    "gender": "female",
+    "zhname": "因纽特语",
+    "mark": "",
+    "enname": "Inuktitut",
+    "enmark": ""
+  },
+  "iu-f-002": {
+    "voice": "iu-Latn-CA-SiqiniqNeural",
+    "lang": "iu",
+    "gender": "female",
+    "zhname": "因纽特语",
+    "mark": "",
+    "enname": "Inuktitut",
+    "enmark": ""
+  },
+  "iu-m-001": {
+    "voice": "iu-Cans-CA-TaqqiqNeural",
+    "lang": "iu",
+    "gender": "male",
+    "zhname": "因纽特语",
+    "mark": "",
+    "enname": "Inuktitut",
+    "enmark": ""
+  },
+  "iu-m-002": {
+    "voice": "iu-Latn-CA-TaqqiqNeural",
+    "lang": "iu",
+    "gender": "male",
+    "zhname": "因纽特语",
+    "mark": "",
+    "enname": "Inuktitut",
+    "enmark": ""
+  },
+  "jv-f-001": {
+    "voice": "jv-ID-SitiNeural",
+    "lang": "jv",
+    "gender": "female",
+    "zhname": "爪哇语",
+    "mark": "",
+    "enname": "Javanese",
+    "enmark": ""
+  },
+  "jv-m-001": {
+    "voice": "jv-ID-DimasNeural",
+    "lang": "jv",
+    "gender": "male",
+    "zhname": "爪哇语",
+    "mark": "",
+    "enname": "Javanese",
+    "enmark": ""
+  },
+  "ka-f-001": {
+    "voice": "ka-GE-EkaNeural",
+    "lang": "ka",
+    "gender": "female",
+    "zhname": "格鲁吉亚语",
+    "mark": "",
+    "enname": "Georgian",
+    "enmark": ""
+  },
+  "ka-m-001": {
+    "voice": "ka-GE-GiorgiNeural",
+    "lang": "ka",
+    "gender": "male",
+    "zhname": "格鲁吉亚语",
+    "mark": "",
+    "enname": "Georgian",
+    "enmark": ""
+  },
+  "kk-f-001": {
+    "voice": "kk-KZ-AigulNeural",
+    "lang": "kk",
+    "gender": "female",
+    "zhname": "哈萨克语",
+    "mark": "",
+    "enname": "Kazakh",
+    "enmark": ""
+  },
+  "kk-m-001": {
+    "voice": "kk-KZ-DauletNeural",
+    "lang": "kk",
+    "gender": "male",
+    "zhname": "哈萨克语",
+    "mark": "",
+    "enname": "Kazakh",
+    "enmark": ""
+  },
+  "km-f-001": {
+    "voice": "km-KH-SreymomNeural",
+    "lang": "km",
+    "gender": "female",
+    "zhname": "高棉语",
+    "mark": "",
+    "enname": "Khmer",
+    "enmark": ""
+  },
+  "km-m-001": {
+    "voice": "km-KH-PisethNeural",
+    "lang": "km",
+    "gender": "male",
+    "zhname": "高棉语",
+    "mark": "",
+    "enname": "Khmer",
+    "enmark": ""
+  },
+  "kn-f-001": {
+    "voice": "kn-IN-SapnaNeural",
+    "lang": "kn",
+    "gender": "female",
+    "zhname": "卡纳达语",
+    "mark": "",
+    "enname": "Kannada",
+    "enmark": ""
+  },
+  "kn-m-001": {
+    "voice": "kn-IN-GaganNeural",
+    "lang": "kn",
+    "gender": "male",
+    "zhname": "卡纳达语",
+    "mark": "",
+    "enname": "Kannada",
+    "enmark": ""
+  },
+  "lo-f-001": {
+    "voice": "lo-LA-KeomanyNeural",
+    "lang": "lo",
+    "gender": "female",
+    "zhname": "老挝语",
+    "mark": "",
+    "enname": "Lao",
+    "enmark": ""
+  },
+  "lo-m-001": {
+    "voice": "lo-LA-ChanthavongNeural",
+    "lang": "lo",
+    "gender": "male",
+    "zhname": "老挝语",
+    "mark": "",
+    "enname": "Lao",
+    "enmark": ""
+  },
+  "lt-f-001": {
+    "voice": "lt-LT-OnaNeural",
+    "lang": "lt",
+    "gender": "female",
+    "zhname": "立陶宛语",
+    "mark": "",
+    "enname": "Lithuanian",
+    "enmark": ""
+  },
+  "lt-m-001": {
+    "voice": "lt-LT-LeonasNeural",
+    "lang": "lt",
+    "gender": "male",
+    "zhname": "立陶宛语",
+    "mark": "",
+    "enname": "Lithuanian",
+    "enmark": ""
+  },
+  "lv-f-001": {
+    "voice": "lv-LV-EveritaNeural",
+    "lang": "lv",
+    "gender": "female",
+    "zhname": "拉脱维亚语",
+    "mark": "",
+    "enname": "Latvian",
+    "enmark": ""
+  },
+  "lv-m-001": {
+    "voice": "lv-LV-NilsNeural",
+    "lang": "lv",
+    "gender": "male",
+    "zhname": "拉脱维亚语",
+    "mark": "",
+    "enname": "Latvian",
+    "enmark": ""
+  },
+  "mk-f-001": {
+    "voice": "mk-MK-MarijaNeural",
+    "lang": "mk",
+    "gender": "female",
+    "zhname": "马其顿语",
+    "mark": "",
+    "enname": "Macedonian",
+    "enmark": ""
+  },
+  "mk-m-001": {
+    "voice": "mk-MK-AleksandarNeural",
+    "lang": "mk",
+    "gender": "male",
+    "zhname": "马其顿语",
+    "mark": "",
+    "enname": "Macedonian",
+    "enmark": ""
+  },
+  "ml-f-001": {
+    "voice": "ml-IN-SobhanaNeural",
+    "lang": "ml",
+    "gender": "female",
+    "zhname": "马拉雅拉姆语",
+    "mark": "",
+    "enname": "Malayalam",
+    "enmark": ""
+  },
+  "ml-m-001": {
+    "voice": "ml-IN-MidhunNeural",
+    "lang": "ml",
+    "gender": "male",
+    "zhname": "马拉雅拉姆语",
+    "mark": "",
+    "enname": "Malayalam",
+    "enmark": ""
+  },
+  "mn-f-001": {
+    "voice": "mn-MN-YesuiNeural",
+    "lang": "mn",
+    "gender": "female",
+    "zhname": "蒙古语",
+    "mark": "",
+    "enname": "Mongolian",
+    "enmark": ""
+  },
+  "mn-m-001": {
+    "voice": "mn-MN-BataaNeural",
+    "lang": "mn",
+    "gender": "male",
+    "zhname": "蒙古语",
+    "mark": "",
+    "enname": "Mongolian",
+    "enmark": ""
+  },
+  "mr-f-001": {
+    "voice": "mr-IN-AarohiNeural",
+    "lang": "mr",
+    "gender": "female",
+    "zhname": "马拉地语",
+    "mark": "",
+    "enname": "Marathi",
+    "enmark": ""
+  },
+  "mr-m-001": {
+    "voice": "mr-IN-ManoharNeural",
+    "lang": "mr",
+    "gender": "male",
+    "zhname": "马拉地语",
+    "mark": "",
+    "enname": "Marathi",
+    "enmark": ""
+  },
+  "ms-f-001": {
+    "voice": "ms-MY-YasminNeural",
+    "lang": "ms",
+    "gender": "female",
+    "zhname": "马来语",
+    "mark": "",
+    "enname": "Malay",
+    "enmark": ""
+  },
+  "ms-m-001": {
+    "voice": "ms-MY-OsmanNeural",
+    "lang": "ms",
+    "gender": "male",
+    "zhname": "马来语",
+    "mark": "俏皮、友好",
+    "enname": "Malay",
+    "enmark": "俏皮, friendly"
+  },
+  "mt-f-001": {
+    "voice": "mt-MT-GraceNeural",
+    "lang": "mt",
+    "gender": "female",
+    "zhname": "马耳他语",
+    "mark": "",
+    "enname": "Maltese",
+    "enmark": ""
+  },
+  "mt-m-001": {
+    "voice": "mt-MT-JosephNeural",
+    "lang": "mt",
+    "gender": "male",
+    "zhname": "马耳他语",
+    "mark": "",
+    "enname": "Maltese",
+    "enmark": ""
+  },
+  "my-f-001": {
+    "voice": "my-MM-NilarNeural",
+    "lang": "my",
+    "gender": "female",
+    "zhname": "缅甸语",
+    "mark": "",
+    "enname": "Burmese",
+    "enmark": ""
+  },
+  "my-m-001": {
+    "voice": "my-MM-ThihaNeural",
+    "lang": "my",
+    "gender": "male",
+    "zhname": "缅甸语",
+    "mark": "",
+    "enname": "Burmese",
+    "enmark": ""
+  },
+  "nb-f-001": {
+    "voice": "nb-NO-IselinNeural",
+    "lang": "nb",
+    "gender": "female",
+    "zhname": "挪威语（书面）",
+    "mark": "明亮、清晰",
+    "enname": "Norwegian Bokmål",
+    "enmark": "bright, clear"
+  },
+  "nb-f-002": {
+    "voice": "nb-NO-PernilleNeural",
+    "lang": "nb",
+    "gender": "female",
+    "zhname": "挪威语（书面）",
+    "mark": "",
+    "enname": "Norwegian Bokmål",
+    "enmark": ""
+  },
+  "nb-m-001": {
+    "voice": "nb-NO-FinnNeural",
+    "lang": "nb",
+    "gender": "male",
+    "zhname": "挪威语（书面）",
+    "mark": "",
+    "enname": "Norwegian Bokmål",
+    "enmark": ""
+  },
+  "ne-f-001": {
+    "voice": "ne-NP-HemkalaNeural",
+    "lang": "ne",
+    "gender": "female",
+    "zhname": "尼泊尔语",
+    "mark": "",
+    "enname": "Nepali",
+    "enmark": ""
+  },
+  "ne-m-001": {
+    "voice": "ne-NP-SagarNeural",
+    "lang": "ne",
+    "gender": "male",
+    "zhname": "尼泊尔语",
+    "mark": "",
+    "enname": "Nepali",
+    "enmark": ""
+  },
+  "nl-f-001": {
+    "voice": "nl-BE-DenaNeural",
+    "lang": "nl",
+    "gender": "female",
+    "zhname": "荷兰语",
+    "mark": "",
+    "enname": "Dutch",
+    "enmark": ""
+  },
+  "nl-f-002": {
+    "voice": "nl-NL-ColetteNeural",
+    "lang": "nl",
+    "gender": "female",
+    "zhname": "荷兰语",
+    "mark": "明亮、清晰",
+    "enname": "Dutch",
+    "enmark": "bright, clear"
+  },
+  "nl-f-003": {
+    "voice": "nl-NL-FennaNeural",
+    "lang": "nl",
+    "gender": "female",
+    "zhname": "荷兰语",
+    "mark": "明亮、自信",
+    "enname": "Dutch",
+    "enmark": "bright, confident"
+  },
+  "nl-m-001": {
+    "voice": "nl-BE-ArnaudNeural",
+    "lang": "nl",
+    "gender": "male",
+    "zhname": "荷兰语",
+    "mark": "",
+    "enname": "Dutch",
+    "enmark": ""
+  },
+  "nl-m-002": {
+    "voice": "nl-NL-MaartenNeural",
+    "lang": "nl",
+    "gender": "male",
+    "zhname": "荷兰语",
+    "mark": "正式、轻快",
+    "enname": "Dutch",
+    "enmark": "formal, upbeat"
+  },
+  "or-f-001": {
+    "voice": "or-IN-SubhasiniNeural",
+    "lang": "or",
+    "gender": "female",
+    "zhname": "奥里亚语",
+    "mark": "",
+    "enname": "Odia",
+    "enmark": ""
+  },
+  "or-m-001": {
+    "voice": "or-IN-SukantNeural",
+    "lang": "or",
+    "gender": "male",
+    "zhname": "奥里亚语",
+    "mark": "",
+    "enname": "Odia",
+    "enmark": ""
+  },
+  "pa-f-001": {
+    "voice": "pa-IN-VaaniNeural",
+    "lang": "pa",
+    "gender": "female",
+    "zhname": "旁遮普语",
+    "mark": "",
+    "enname": "Punjabi",
+    "enmark": ""
+  },
+  "pa-m-001": {
+    "voice": "pa-IN-OjasNeural",
+    "lang": "pa",
+    "gender": "male",
+    "zhname": "旁遮普语",
+    "mark": "",
+    "enname": "Punjabi",
+    "enmark": ""
+  },
+  "pl-f-001": {
+    "voice": "pl-PL-AgnieszkaNeural",
+    "lang": "pl",
+    "gender": "female",
+    "zhname": "波兰语",
+    "mark": "",
+    "enname": "Polish",
+    "enmark": ""
+  },
+  "pl-f-002": {
+    "voice": "pl-PL-ZofiaNeural",
+    "lang": "pl",
+    "gender": "female",
+    "zhname": "波兰语",
+    "mark": "明亮、清晰",
+    "enname": "Polish",
+    "enmark": "bright, clear"
+  },
+  "pl-m-001": {
+    "voice": "pl-PL-MarekNeural",
+    "lang": "pl",
+    "gender": "male",
+    "zhname": "波兰语",
+    "mark": "",
+    "enname": "Polish",
+    "enmark": ""
+  },
+  "ps-f-001": {
+    "voice": "ps-AF-LatifaNeural",
+    "lang": "ps",
+    "gender": "female",
+    "zhname": "普什图语",
+    "mark": "",
+    "enname": "Pashto",
+    "enmark": ""
+  },
+  "ps-m-001": {
+    "voice": "ps-AF-GulNawazNeural",
+    "lang": "ps",
+    "gender": "male",
+    "zhname": "普什图语",
+    "mark": "",
+    "enname": "Pashto",
+    "enmark": ""
+  },
+  "pt-f-001": {
+    "voice": "pt-BR-BrendaNeural",
+    "lang": "pt",
+    "gender": "female",
+    "zhname": "葡萄牙语",
+    "mark": "",
+    "enname": "Portuguese",
+    "enmark": ""
+  },
+  "pt-f-002": {
+    "voice": "pt-BR-ElzaNeural",
+    "lang": "pt",
+    "gender": "female",
+    "zhname": "葡萄牙语",
+    "mark": "",
+    "enname": "Portuguese",
+    "enmark": ""
+  },
+  "pt-f-003": {
+    "voice": "pt-BR-FranciscaNeural",
+    "lang": "pt",
+    "gender": "female",
+    "zhname": "葡萄牙语",
+    "mark": "开朗、清脆",
+    "enname": "Portuguese",
+    "enmark": "cheerful, crisp"
+  },
+  "pt-f-004": {
+    "voice": "pt-BR-GiovannaNeural",
+    "lang": "pt",
+    "gender": "female",
+    "zhname": "葡萄牙语",
+    "mark": "",
+    "enname": "Portuguese",
+    "enmark": ""
+  },
+  "pt-f-005": {
+    "voice": "pt-BR-LeilaNeural",
+    "lang": "pt",
+    "gender": "female",
+    "zhname": "葡萄牙语",
+    "mark": "",
+    "enname": "Portuguese",
+    "enmark": ""
+  },
+  "pt-f-006": {
+    "voice": "pt-BR-LeticiaNeural",
+    "lang": "pt",
+    "gender": "female",
+    "zhname": "葡萄牙语",
+    "mark": "好奇、开朗",
+    "enname": "Portuguese",
+    "enmark": "好奇, cheerful"
+  },
+  "pt-f-007": {
+    "voice": "pt-BR-ManuelaNeural",
+    "lang": "pt",
+    "gender": "female",
+    "zhname": "葡萄牙语",
+    "mark": "",
+    "enname": "Portuguese",
+    "enmark": ""
+  },
+  "pt-f-008": {
+    "voice": "pt-BR-ThalitaMultilingualNeural",
+    "lang": "pt",
+    "gender": "female",
+    "zhname": "葡萄牙语",
+    "mark": "自信、正式、温暖、开朗、随和",
+    "enname": "Portuguese",
+    "enmark": "confident, formal, warm, cheerful, easygoing"
+  },
+  "pt-f-009": {
+    "voice": "pt-BR-ThalitaNeural",
+    "lang": "pt",
+    "gender": "female",
+    "zhname": "葡萄牙语",
+    "mark": "自信、正式",
+    "enname": "Portuguese",
+    "enmark": "confident, formal"
+  },
+  "pt-f-010": {
+    "voice": "pt-BR-YaraNeural",
+    "lang": "pt",
+    "gender": "female",
+    "zhname": "葡萄牙语",
+    "mark": "圆润、生动、明亮",
+    "enname": "Portuguese",
+    "enmark": "rounded, lively, bright"
+  },
+  "pt-f-011": {
+    "voice": "pt-PT-FernandaNeural",
+    "lang": "pt",
+    "gender": "female",
+    "zhname": "葡萄牙语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "Portuguese",
+    "enmark": "crisp, bright, clear"
+  },
+  "pt-f-012": {
+    "voice": "pt-PT-RaquelNeural",
+    "lang": "pt",
+    "gender": "female",
+    "zhname": "葡萄牙语",
+    "mark": "平静、明亮",
+    "enname": "Portuguese",
+    "enmark": "calm, bright"
+  },
+  "pt-m-001": {
+    "voice": "pt-BR-AntonioNeural",
+    "lang": "pt",
+    "gender": "male",
+    "zhname": "葡萄牙语",
+    "mark": "明亮、轻快",
+    "enname": "Portuguese",
+    "enmark": "bright, upbeat"
+  },
+  "pt-m-002": {
+    "voice": "pt-BR-DonatoNeural",
+    "lang": "pt",
+    "gender": "male",
+    "zhname": "葡萄牙语",
+    "mark": "",
+    "enname": "Portuguese",
+    "enmark": ""
+  },
+  "pt-m-003": {
+    "voice": "pt-BR-FabioNeural",
+    "lang": "pt",
+    "gender": "male",
+    "zhname": "葡萄牙语",
+    "mark": "",
+    "enname": "Portuguese",
+    "enmark": ""
+  },
+  "pt-m-004": {
+    "voice": "pt-BR-HumbertoNeural",
+    "lang": "pt",
+    "gender": "male",
+    "zhname": "葡萄牙语",
+    "mark": "",
+    "enname": "Portuguese",
+    "enmark": ""
+  },
+  "pt-m-005": {
+    "voice": "pt-BR-JulioNeural",
+    "lang": "pt",
+    "gender": "male",
+    "zhname": "葡萄牙语",
+    "mark": "",
+    "enname": "Portuguese",
+    "enmark": ""
+  },
+  "pt-m-006": {
+    "voice": "pt-BR-MacerioMultilingualNeural",
+    "lang": "pt",
+    "gender": "male",
+    "zhname": "葡萄牙语",
+    "mark": "清晰、自信、轻快",
+    "enname": "Portuguese",
+    "enmark": "clear, confident, upbeat"
+  },
+  "pt-m-007": {
+    "voice": "pt-BR-NicolauNeural",
+    "lang": "pt",
+    "gender": "male",
+    "zhname": "葡萄牙语",
+    "mark": "",
+    "enname": "Portuguese",
+    "enmark": ""
+  },
+  "pt-m-008": {
+    "voice": "pt-BR-ValerioNeural",
+    "lang": "pt",
+    "gender": "male",
+    "zhname": "葡萄牙语",
+    "mark": "",
+    "enname": "Portuguese",
+    "enmark": ""
+  },
+  "pt-m-009": {
+    "voice": "pt-PT-DuarteNeural",
+    "lang": "pt",
+    "gender": "male",
+    "zhname": "葡萄牙语",
+    "mark": "严肃、低沉",
+    "enname": "Portuguese",
+    "enmark": "serious, deep"
+  },
+  "ro-f-001": {
+    "voice": "ro-RO-AlinaNeural",
+    "lang": "ro",
+    "gender": "female",
+    "zhname": "罗马尼亚语",
+    "mark": "",
+    "enname": "Romanian",
+    "enmark": ""
+  },
+  "ro-m-001": {
+    "voice": "ro-RO-EmilNeural",
+    "lang": "ro",
+    "gender": "male",
+    "zhname": "罗马尼亚语",
+    "mark": "",
+    "enname": "Romanian",
+    "enmark": ""
+  },
+  "ru-f-001": {
+    "voice": "ru-RU-DariyaNeural",
+    "lang": "ru",
+    "gender": "female",
+    "zhname": "俄语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "Russian",
+    "enmark": "crisp, bright, clear"
+  },
+  "ru-f-002": {
+    "voice": "ru-RU-SvetlanaNeural",
+    "lang": "ru",
+    "gender": "female",
+    "zhname": "俄语",
+    "mark": "",
+    "enname": "Russian",
+    "enmark": ""
+  },
+  "ru-m-001": {
+    "voice": "ru-RU-DmitryNeural",
+    "lang": "ru",
+    "gender": "male",
+    "zhname": "俄语",
+    "mark": "",
+    "enname": "Russian",
+    "enmark": ""
+  },
+  "si-f-001": {
+    "voice": "si-LK-ThiliniNeural",
+    "lang": "si",
+    "gender": "female",
+    "zhname": "僧伽罗语",
+    "mark": "",
+    "enname": "Sinhala",
+    "enmark": ""
+  },
+  "si-m-001": {
+    "voice": "si-LK-SameeraNeural",
+    "lang": "si",
+    "gender": "male",
+    "zhname": "僧伽罗语",
+    "mark": "",
+    "enname": "Sinhala",
+    "enmark": ""
+  },
+  "sk-f-001": {
+    "voice": "sk-SK-ViktoriaNeural",
+    "lang": "sk",
+    "gender": "female",
+    "zhname": "斯洛伐克语",
+    "mark": "",
+    "enname": "Slovak",
+    "enmark": ""
+  },
+  "sk-m-001": {
+    "voice": "sk-SK-LukasNeural",
+    "lang": "sk",
+    "gender": "male",
+    "zhname": "斯洛伐克语",
+    "mark": "",
+    "enname": "Slovak",
+    "enmark": ""
+  },
+  "sl-f-001": {
+    "voice": "sl-SI-PetraNeural",
+    "lang": "sl",
+    "gender": "female",
+    "zhname": "斯洛文尼亚语",
+    "mark": "",
+    "enname": "Slovenian",
+    "enmark": ""
+  },
+  "sl-m-001": {
+    "voice": "sl-SI-RokNeural",
+    "lang": "sl",
+    "gender": "male",
+    "zhname": "斯洛文尼亚语",
+    "mark": "",
+    "enname": "Slovenian",
+    "enmark": ""
+  },
+  "so-f-001": {
+    "voice": "so-SO-UbaxNeural",
+    "lang": "so",
+    "gender": "female",
+    "zhname": "索马里语",
+    "mark": "",
+    "enname": "Somali",
+    "enmark": ""
+  },
+  "so-m-001": {
+    "voice": "so-SO-MuuseNeural",
+    "lang": "so",
+    "gender": "male",
+    "zhname": "索马里语",
+    "mark": "",
+    "enname": "Somali",
+    "enmark": ""
+  },
+  "sq-f-001": {
+    "voice": "sq-AL-AnilaNeural",
+    "lang": "sq",
+    "gender": "female",
+    "zhname": "阿尔巴尼亚语",
+    "mark": "",
+    "enname": "Albanian",
+    "enmark": ""
+  },
+  "sq-m-001": {
+    "voice": "sq-AL-IlirNeural",
+    "lang": "sq",
+    "gender": "male",
+    "zhname": "阿尔巴尼亚语",
+    "mark": "",
+    "enname": "Albanian",
+    "enmark": ""
+  },
+  "sr-f-001": {
+    "voice": "sr-Latn-RS-SophieNeural",
+    "lang": "sr",
+    "gender": "female",
+    "zhname": "塞尔维亚语",
+    "mark": "",
+    "enname": "Serbian",
+    "enmark": ""
+  },
+  "sr-f-002": {
+    "voice": "sr-RS-SophieNeural",
+    "lang": "sr",
+    "gender": "female",
+    "zhname": "塞尔维亚语",
+    "mark": "",
+    "enname": "Serbian",
+    "enmark": ""
+  },
+  "sr-m-001": {
+    "voice": "sr-Latn-RS-NicholasNeural",
+    "lang": "sr",
+    "gender": "male",
+    "zhname": "塞尔维亚语",
+    "mark": "",
+    "enname": "Serbian",
+    "enmark": ""
+  },
+  "sr-m-002": {
+    "voice": "sr-RS-NicholasNeural",
+    "lang": "sr",
+    "gender": "male",
+    "zhname": "塞尔维亚语",
+    "mark": "",
+    "enname": "Serbian",
+    "enmark": ""
+  },
+  "su-f-001": {
+    "voice": "su-ID-TutiNeural",
+    "lang": "su",
+    "gender": "female",
+    "zhname": "巽他语",
+    "mark": "",
+    "enname": "Sundanese",
+    "enmark": ""
+  },
+  "su-m-001": {
+    "voice": "su-ID-JajangNeural",
+    "lang": "su",
+    "gender": "male",
+    "zhname": "巽他语",
+    "mark": "",
+    "enname": "Sundanese",
+    "enmark": ""
+  },
+  "sv-f-001": {
+    "voice": "sv-SE-HilleviNeural",
+    "lang": "sv",
+    "gender": "female",
+    "zhname": "瑞典语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "Swedish",
+    "enmark": "crisp, bright, clear"
+  },
+  "sv-f-002": {
+    "voice": "sv-SE-SofieNeural",
+    "lang": "sv",
+    "gender": "female",
+    "zhname": "瑞典语",
+    "mark": "",
+    "enname": "Swedish",
+    "enmark": ""
+  },
+  "sv-m-001": {
+    "voice": "sv-SE-MattiasNeural",
+    "lang": "sv",
+    "gender": "male",
+    "zhname": "瑞典语",
+    "mark": "",
+    "enname": "Swedish",
+    "enmark": ""
+  },
+  "sw-f-001": {
+    "voice": "sw-KE-ZuriNeural",
+    "lang": "sw",
+    "gender": "female",
+    "zhname": "斯瓦西里语",
+    "mark": "",
+    "enname": "Swahili",
+    "enmark": ""
+  },
+  "sw-f-002": {
+    "voice": "sw-TZ-RehemaNeural",
+    "lang": "sw",
+    "gender": "female",
+    "zhname": "斯瓦西里语",
+    "mark": "",
+    "enname": "Swahili",
+    "enmark": ""
+  },
+  "sw-m-001": {
+    "voice": "sw-KE-RafikiNeural",
+    "lang": "sw",
+    "gender": "male",
+    "zhname": "斯瓦西里语",
+    "mark": "",
+    "enname": "Swahili",
+    "enmark": ""
+  },
+  "sw-m-002": {
+    "voice": "sw-TZ-DaudiNeural",
+    "lang": "sw",
+    "gender": "male",
+    "zhname": "斯瓦西里语",
+    "mark": "",
+    "enname": "Swahili",
+    "enmark": ""
+  },
+  "ta-f-001": {
+    "voice": "ta-IN-PallaviNeural",
+    "lang": "ta",
+    "gender": "female",
+    "zhname": "泰米尔语",
+    "mark": "",
+    "enname": "Tamil",
+    "enmark": ""
+  },
+  "ta-f-002": {
+    "voice": "ta-LK-SaranyaNeural",
+    "lang": "ta",
+    "gender": "female",
+    "zhname": "泰米尔语",
+    "mark": "",
+    "enname": "Tamil",
+    "enmark": ""
+  },
+  "ta-f-003": {
+    "voice": "ta-MY-KaniNeural",
+    "lang": "ta",
+    "gender": "female",
+    "zhname": "泰米尔语",
+    "mark": "",
+    "enname": "Tamil",
+    "enmark": ""
+  },
+  "ta-f-004": {
+    "voice": "ta-SG-VenbaNeural",
+    "lang": "ta",
+    "gender": "female",
+    "zhname": "泰米尔语",
+    "mark": "",
+    "enname": "Tamil",
+    "enmark": ""
+  },
+  "ta-m-001": {
+    "voice": "ta-IN-ValluvarNeural",
+    "lang": "ta",
+    "gender": "male",
+    "zhname": "泰米尔语",
+    "mark": "",
+    "enname": "Tamil",
+    "enmark": ""
+  },
+  "ta-m-002": {
+    "voice": "ta-LK-KumarNeural",
+    "lang": "ta",
+    "gender": "male",
+    "zhname": "泰米尔语",
+    "mark": "",
+    "enname": "Tamil",
+    "enmark": ""
+  },
+  "ta-m-003": {
+    "voice": "ta-MY-SuryaNeural",
+    "lang": "ta",
+    "gender": "male",
+    "zhname": "泰米尔语",
+    "mark": "",
+    "enname": "Tamil",
+    "enmark": ""
+  },
+  "ta-m-004": {
+    "voice": "ta-SG-AnbuNeural",
+    "lang": "ta",
+    "gender": "male",
+    "zhname": "泰米尔语",
+    "mark": "",
+    "enname": "Tamil",
+    "enmark": ""
+  },
+  "te-f-001": {
+    "voice": "te-IN-ShrutiNeural",
+    "lang": "te",
+    "gender": "female",
+    "zhname": "泰卢固语",
+    "mark": "",
+    "enname": "Telugu",
+    "enmark": ""
+  },
+  "te-m-001": {
+    "voice": "te-IN-MohanNeural",
+    "lang": "te",
+    "gender": "male",
+    "zhname": "泰卢固语",
+    "mark": "",
+    "enname": "Telugu",
+    "enmark": ""
+  },
+  "th-f-001": {
+    "voice": "th-TH-AcharaNeural",
+    "lang": "th",
+    "gender": "female",
+    "zhname": "泰语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "Thai",
+    "enmark": "crisp, bright, clear"
+  },
+  "th-f-002": {
+    "voice": "th-TH-PremwadeeNeural",
+    "lang": "th",
+    "gender": "female",
+    "zhname": "泰语",
+    "mark": "",
+    "enname": "Thai",
+    "enmark": ""
+  },
+  "th-m-001": {
+    "voice": "th-TH-NiwatNeural",
+    "lang": "th",
+    "gender": "male",
+    "zhname": "泰语",
+    "mark": "",
+    "enname": "Thai",
+    "enmark": ""
+  },
+  "tr-f-001": {
+    "voice": "tr-TR-EmelNeural",
+    "lang": "tr",
+    "gender": "female",
+    "zhname": "土耳其语",
+    "mark": "清脆、明亮、清晰",
+    "enname": "Turkish",
+    "enmark": "crisp, bright, clear"
+  },
+  "tr-m-001": {
+    "voice": "tr-TR-AhmetNeural",
+    "lang": "tr",
+    "gender": "male",
+    "zhname": "土耳其语",
+    "mark": "",
+    "enname": "Turkish",
+    "enmark": ""
+  },
+  "uk-f-001": {
+    "voice": "uk-UA-PolinaNeural",
+    "lang": "uk",
+    "gender": "female",
+    "zhname": "乌克兰语",
+    "mark": "",
+    "enname": "Ukrainian",
+    "enmark": ""
+  },
+  "uk-m-001": {
+    "voice": "uk-UA-OstapNeural",
+    "lang": "uk",
+    "gender": "male",
+    "zhname": "乌克兰语",
+    "mark": "",
+    "enname": "Ukrainian",
+    "enmark": ""
+  },
+  "ur-f-001": {
+    "voice": "ur-IN-GulNeural",
+    "lang": "ur",
+    "gender": "female",
+    "zhname": "乌尔都语",
+    "mark": "",
+    "enname": "Urdu",
+    "enmark": ""
+  },
+  "ur-f-002": {
+    "voice": "ur-PK-UzmaNeural",
+    "lang": "ur",
+    "gender": "female",
+    "zhname": "乌尔都语",
+    "mark": "",
+    "enname": "Urdu",
+    "enmark": ""
+  },
+  "ur-m-001": {
+    "voice": "ur-IN-SalmanNeural",
+    "lang": "ur",
+    "gender": "male",
+    "zhname": "乌尔都语",
+    "mark": "",
+    "enname": "Urdu",
+    "enmark": ""
+  },
+  "ur-m-002": {
+    "voice": "ur-PK-AsadNeural",
+    "lang": "ur",
+    "gender": "male",
+    "zhname": "乌尔都语",
+    "mark": "",
+    "enname": "Urdu",
+    "enmark": ""
+  },
+  "uz-f-001": {
+    "voice": "uz-UZ-MadinaNeural",
+    "lang": "uz",
+    "gender": "female",
+    "zhname": "乌兹别克语",
+    "mark": "",
+    "enname": "Uzbek",
+    "enmark": ""
+  },
+  "uz-m-001": {
+    "voice": "uz-UZ-SardorNeural",
+    "lang": "uz",
+    "gender": "male",
+    "zhname": "乌兹别克语",
+    "mark": "",
+    "enname": "Uzbek",
+    "enmark": ""
+  },
+  "vi-f-001": {
+    "voice": "vi-VN-HoaiMyNeural",
+    "lang": "vi",
+    "gender": "female",
+    "zhname": "越南语",
+    "mark": "",
+    "enname": "Vietnamese",
+    "enmark": ""
+  },
+  "vi-m-001": {
+    "voice": "vi-VN-NamMinhNeural",
+    "lang": "vi",
+    "gender": "male",
+    "zhname": "越南语",
+    "mark": "",
+    "enname": "Vietnamese",
+    "enmark": ""
+  },
+  "wuu-f-001": {
+    "voice": "wuu-CN-XiaotongNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "吴语",
+    "mark": "吴语·温暖、友好、舒缓",
+    "enname": "Wu Chinese",
+    "enmark": "Wu Chinese · warm, friendly, soothing"
+  },
+  "wuu-m-001": {
+    "voice": "wuu-CN-YunzheNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "吴语",
+    "mark": "吴语·平静、低沉、温柔",
+    "enname": "Wu Chinese",
+    "enmark": "Wu Chinese · calm, deep, gentle"
+  },
+  "yue-f-001": {
+    "voice": "yue-CN-XiaoMinNeural",
+    "lang": "zh",
+    "gender": "female",
+    "zhname": "粤语",
+    "mark": "粤语·明亮、清脆、自信",
+    "enname": "Cantonese",
+    "enmark": "Cantonese · bright, crisp, confident"
+  },
+  "yue-m-001": {
+    "voice": "yue-CN-YunSongNeural",
+    "lang": "zh",
+    "gender": "male",
+    "zhname": "粤语",
+    "mark": "粤语·低沉、平静、正式",
+    "enname": "Cantonese",
+    "enmark": "Cantonese · deep, calm, formal"
+  },
+  "zu-f-001": {
+    "voice": "zu-ZA-ThandoNeural",
+    "lang": "zu",
+    "gender": "female",
+    "zhname": "祖鲁语",
+    "mark": "",
+    "enname": "Zulu",
+    "enmark": ""
+  },
+  "zu-m-001": {
+    "voice": "zu-ZA-ThembaNeural",
+    "lang": "zu",
+    "gender": "male",
+    "zhname": "祖鲁语",
+    "mark": "",
+    "enname": "Zulu",
+    "enmark": ""
+  }
+}

@@ -1,0 +1,5 @@
+2025-10-22 15:48:12,926 - DEBUG - [logs_test.py:4] - debug details...
+2025-10-22 15:48:12,926 - INFO - [logs_test.py:5] - something done
+2025-10-22 15:48:12,926 - WARNING - [logs_test.py:6] - careful: something
+2025-10-22 15:48:12,926 - ERROR - [logs_test.py:7] - failed: err
+NoneType: None

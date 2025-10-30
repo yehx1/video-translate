@@ -1,0 +1,824 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ task.title }} - 字幕编辑{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<style>
+:root {
+  --tech-primary:#165DFF; --tech-primary-light:#E8F3FF; --tech-border:#E5E7EB;
+  --tech-shadow:0 4px 12px rgba(0,0,0,.05); --tech-hover:0 6px 16px rgba(22,93,255,.12);
+  --transition-base:all .3s ease;
+}
+.card-tech{border:1px solid var(--tech-border);border-radius:12px;box-shadow:var(--tech-shadow);transition:var(--transition-base);}
+.card-tech:hover{box-shadow:var(--tech-hover);}
+.card-tech .card-header{background:var(--tech-primary-light);border-bottom:1px solid var(--tech-border);border-top-left-radius:11px;border-top-right-radius:11px;padding:.8rem 1.2rem;}
+.btn-tech{background:var(--tech-primary);color:#fff;border:none;border-radius:6px;padding:.375rem .75rem;transition:var(--transition-base);}
+.btn-tech:hover{background:#0E4BD8;color:#fff;transform:translateY(-2px);}
+.btn-tech-outline{border:1px solid var(--tech-primary);color:var(--tech-primary);border-radius:6px;padding:.375rem .75rem;transition:var(--transition-base);}
+.btn-tech-outline:hover{background:var(--tech-primary-light);color:var(--tech-primary);transform:translateY(-2px);}
+.table-tech{border-collapse:separate;border-spacing:0;border-radius:8px;overflow:hidden;}
+.table-tech thead{background:var(--tech-primary-light);color:var(--tech-primary);}
+.table-tech th{border-bottom:1px solid var(--tech-border);padding:.8rem 1rem;font-weight:600;text-align:center;}
+.table-tech td{border-bottom:1px solid var(--tech-border);padding:.8rem 1rem;text-align:center;vertical-align:middle;transition:var(--transition-base);}
+.table-tech tbody tr:hover{background:var(--tech-primary-light);}
+.form-label.fw-medium{color:#333;margin-bottom:.4rem;display:block;}
+.form-control,.form-select{border:1px solid var(--tech-border);border-radius:6px;padding:.4rem .75rem;transition:var(--transition-base);}
+.form-control:focus,.form-select:focus{border-color:var(--tech-primary);box-shadow:0 0 0 3px rgba(22,93,255,.15);outline:none;}
+.status-tag{padding:.2rem .5rem;border-radius:4px;font-size:.875rem;font-weight:500;}
+.status-success{background:#E8F5E9;color:#2E7D32;}
+.status-warning{background:#FFF8E1;color:#FF8F00;}
+.status-processing{background:#E3F2FD;color:#1976D2;}
+.status-danger{background:#FFEBEE;color:#C62828;}
+.modal-content.card-tech{border-radius:12px;overflow:hidden;}
+.modal-header{padding:.8rem 1.2rem;border-bottom:1px solid var(--tech-border);}
+.modal-footer{padding:.8rem 1.2rem;border-top:1px solid var(--tech-border);}
+.info-card{border-radius:8px;border:1px solid var(--tech-border);padding:1rem;background:#fff;transition:var(--transition-base);}
+.info-card:hover{box-shadow:var(--tech-shadow);transform:translateY(-2px);}
+.info-card .text-secondary{color:#6B7280!important;font-size:.875rem;}
+.info-card .fw-medium{color:#1F2937;font-size:.9375rem;}
+.video-container{border-radius:8px;overflow:hidden;border:1px solid var(--tech-border);transition:var(--transition-base);}
+.video-container:hover{box-shadow:var(--tech-shadow);}
+
+/* 颜色输入（保留取色器+HEX） */
+.color-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;}
+.color-row .color-input{width:44px;height:34px;padding:0;border:1px solid var(--tech-border);border-radius:6px;}
+.color-row .hex-input{width:110px;}
+/* 整体预览（保留） */
+.preview-badge{display:inline-flex;align-items:center;justify-content:center;padding:.25rem .5rem;border-radius:6px;border:1px dashed var(--tech-border);font-size:.875rem;min-width:6rem;}
+.preview-wrap{display:flex;align-items:center;gap:.6rem;margin-top:.35rem;flex-wrap:wrap;}
+
+/* ========= 方案B：示例音频间距与标签宽度 ========= */
+#tts-samples .tts-sample-row{column-gap:.25rem;row-gap:0;}
+#tts-samples .tts-sample-row span{min-width:6rem;}
+
+@media (max-width:768px){
+  .card-header.d-flex{flex-direction:column;align-items:flex-start!important;}
+  .row.g-3>[class*="col-"]{flex:0 0 100%;max-width:100%;}
+  .table-tech th,.table-tech td{padding:.6rem .4rem;font-size:.875rem;}
+  .modal-dialog.modal-lg{max-width:90%;}
+}
+</style>
+
+<div class="card card-tech mb-4">
+  <!-- 头部 -->
+  <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <h5 class="mb-0 d-flex align-items-center">
+      <i class="bi bi-file-text me-2" style="color:var(--tech-primary);"></i>任务详情：{{ task.title }}
+    </h5>
+    <div class="d-flex gap-2 flex-wrap">
+      <a href="{% url 'task_list' %}" class="btn btn-tech-outline btn-sm d-flex align-items-center">
+        <i class="bi bi-arrow-left me-1"></i>返回列表
+      </a>
+      {% if task.status == 'REVIEW' %}
+      <form action="{% url 'confirm_translation' task.id %}" method="post" class="d-inline">
+        {% csrf_token %}<input type="hidden" name="action" value="confirm">
+        <button type="submit" class="btn btn-tech btn-sm d-flex align-items-center" onclick="return confirm('确认翻译无误并生成视频？')">
+          <i class="bi bi-check-circle me-1"></i>确认翻译并生成
+        </button>
+      </form>
+      {% endif %}
+      {% if task.status == 'SUCCESS' %}
+      <form action="{% url 'refinalize_video' task.id %}" method="post" class="d-inline">
+        {% csrf_token %}<input type="hidden" name="action" value="refinalize">
+        <button type="submit" class="btn btn-tech-outline btn-sm d-flex align-items-center" style="color:#EF4444;border-color:#EF4444;" onclick="return confirm('确定要重新合成视频吗？此操作会覆盖原有文件。')">
+          <i class="bi bi-arrow-repeat me-1"></i>重新合成
+        </button>
+      </form>
+      {% endif %}
+      {% if task.tts_file and task.bg_video_file %}
+      <form action="{% url 'reburn_video' task.id %}" method="post" class="d-inline">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-tech-outline btn-sm d-flex align-items-center" style="color:#D97706;border-color:#D97706;" onclick="return confirm('确定仅重新烧录字幕吗？')">
+          <i class="bi bi-cc-circle me-1"></i>仅重新合成视频字幕
+        </button>
+      </form>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- 字幕样式设置（可折叠） -->
+  <div class="card card-tech mb-4 mx-4 mt-2">
+    <div class="card-header d-flex align-items-center justify-content-between">
+      <h6 class="mb-0 d-flex align-items-center">
+        <i class="bi bi-palette me-2" style="color:var(--tech-primary);"></i>
+        最终合成 - 字幕样式设置（重新合成视频字幕之前请先点击保存样式）
+      </h6>
+      <button id="toggle-style" class="btn btn-tech-outline btn-sm d-flex align-items-center"
+              type="button" data-bs-toggle="collapse" data-bs-target="#subtitleStyleCollapse"
+              aria-expanded="true" aria-controls="subtitleStyleCollapse">
+        <i id="styleChevron" class="bi bi-chevron-up me-1"></i><span id="styleBtnText">隐藏</span>
+      </button>
+    </div>
+    <div id="subtitleStyleCollapse" class="collapse show">
+      <div class="card-body">
+        <form method="post" class="row g-3" onsubmit="return confirm('确定保存字幕样式设置吗？')">
+          {% csrf_token %}
+          <input type="hidden" name="action" value="save_style">
+          <input type="hidden" name="subtitle_format" value="ass">
+          <input type="hidden" name="burn_subtitle" value="on">
+
+          <!-- 字体（下拉 + 自定义，实际提交隐藏字段 sub_font_name） -->
+          <div class="col-md-3">
+            <label for="id_sub_font_name_select" class="form-label fw-medium">字体</label>
+
+            <!-- 真正提交到后端的字段 -->
+            <input type="hidden" id="id_sub_font_name" name="sub_font_name" value="{{ task.sub_font_name|default:'' }}">
+
+            <!-- 预设下拉 -->
+            <select id="id_sub_font_name_select" class="form-select" data-current="{{ task.sub_font_name|default_if_none:'' }}">
+              <option value="Noto Sans CJK SC">Noto Sans CJK SC</option>
+              <option value="DejaVu Sans Mono">DejaVu Sans Mono</option>
+              <option value="DejaVu Sans">DejaVu Sans</option>
+              <option value="DejaVu Serif">DejaVu Serif</option>
+              <option value="WenQuanYi Micro Hei Mono">WenQuanYi Micro Hei Mono</option>
+              <option value="WenQuanYi Micro Hei">WenQuanYi Micro Hei</option>
+              <option value="WenQuanYi Zen Hei Mono">WenQuanYi Zen Hei Mono</option>
+              <option value="WenQuanYi Zen Hei Sharp">WenQuanYi Zen Hei Sharp</option>
+              <option value="WenQuanYi Zen Hei">WenQuanYi Zen Hei</option>
+            </select>
+          </div>
+
+          <!-- 字号 -->
+          <div class="col-md-2">
+            <label for="id_sub_font_size" class="form-label fw-medium">字号</label>
+            <input type="number" class="form-control" id="id_sub_font_size" name="sub_font_size"
+                   value="{{ task.sub_font_size|default:'' }}" step="0.1" min="1">
+          </div>
+
+          <!-- 描边宽度 -->
+          <div class="col-md-2">
+            <label for="id_sub_outline_width" class="form-label fw-medium">描边宽度</label>
+            <input type="number" class="form-control" id="id_sub_outline_width" name="sub_outline_width"
+                   value="{{ task.sub_outline_width|default:'0' }}" step="1" min="0">
+          </div>
+
+          <!-- 背景透明度（1=完全透明, 0=不透明） -->
+          <div class="col-md-2">
+            <label for="id_sub_back_opacity" class="form-label fw-medium">
+              背景透明度 <small class="text-secondary">(1=透明)</small>
+            </label>
+            <input type="number" class="form-control" id="id_sub_back_opacity" name="sub_back_opacity"
+                   value="{{ task.sub_back_opacity|default:'0' }}" step="0.1" min="0" max="1" inputmode="decimal" pattern="[0-1](\.\d+)?">
+          </div>
+
+          <!-- 对齐（ASS 1..9） -->
+          <div class="col-md-2">
+            <label for="id_sub_alignment" class="form-label fw-medium">对齐</label>
+            <select id="id_sub_alignment" name="sub_alignment" class="form-select">
+              {% with a=task.sub_alignment|stringformat:"s" %}
+              <option value="1" {% if a == "1" %}selected{% endif %}>1：左下</option>
+              <option value="2" {% if a == "2" %}selected{% endif %}>2：中下</option>
+              <option value="3" {% if a == "3" %}selected{% endif %}>3：右下</option>
+              <option value="4" {% if a == "4" %}selected{% endif %}>4：左中</option>
+              <option value="5" {% if a == "5" %}selected{% endif %}>5：居中</option>
+              <option value="6" {% if a == "6" %}selected{% endif %}>6：右中</option>
+              <option value="7" {% if a == "7" %}selected{% endif %}>7：左上</option>
+              <option value="8" {% if a == "8" %}selected{% endif %}>8：中上</option>
+              <option value="9" {% if a == "9" %}selected{% endif %}>9：右上</option>
+              {% endwith %}
+            </select>
+          </div>
+
+          <!-- 音量 -->
+          <div class="col-md-1">
+            <label class="form-label fw-medium" for="id_bgm_volume">背景音量</label>
+            <input type="number" class="form-control" id="id_bgm_volume" name="bgm_volume"
+                   value="{{ task.bgm_volume|default:'1' }}" step="0.1" min="0" max="2">
+          </div>
+          <div class="col-md-1">
+            <label class="form-label fw-medium" for="id_tts_volume">配音音量</label>
+            <input type="number" class="form-control" id="id_tts_volume" name="tts_volume"
+                   value="{{ task.tts_volume|default:'1' }}" step="0.1" min="0" max="2">
+          </div>
+
+          <!-- 字体颜色 -->
+          <div class="col-md-2">
+            <label class="form-label fw-medium">字体颜色</label>
+            <input type="text" name="sub_font_color" id="id_sub_font_color"
+                   value="{{ task.sub_font_color|default:'#FFFFFF' }}" class="form-control d-none">
+            <div class="color-row">
+              <input type="color" class="color-input" id="cp-id_sub_font_color">
+              <input type="text" class="form-control hex-input" id="txt-id_sub_font_color"
+                     placeholder="#RRGGBB" inputmode="text" maxlength="7" pattern="#[0-9a-fA-F]{6}">
+            </div>
+          </div>
+
+          <!-- 描边颜色 -->
+          <div class="col-md-2">
+            <label class="form-label fw-medium">描边颜色</label>
+            <input type="text" name="sub_outline_color" id="id_sub_outline_color"
+                   value="{{ task.sub_outline_color|default:'#000000' }}" class="form-control d-none">
+            <div class="color-row">
+              <input type="color" class="color-input" id="cp-id_sub_outline_color">
+              <input type="text" class="form-control hex-input" id="txt-id_sub_outline_color"
+                     placeholder="#RRGGBB" inputmode="text" maxlength="7" pattern="#[0-9a-fA-F]{6}">
+            </div>
+          </div>
+
+          <!-- 背景颜色 -->
+          <div class="col-md-2">
+            <label class="form-label fw-medium">背景颜色</label>
+            <input type="text" name="sub_back_color" id="id_sub_back_color"
+                   value="{{ task.sub_back_color|default:'#000000' }}" class="form-control d-none">
+            <div class="color-row">
+              <input type="color" class="color-input" id="cp-id_sub_back_color">
+              <input type="text" class="form-control hex-input" id="txt-id_sub_back_color"
+                     placeholder="#RRGGBB" inputmode="text" maxlength="7" pattern="#[0-9a-fA-F]{6}">
+            </div>
+          </div>
+
+          <!-- B / I / U -->
+          <div class="col-md-1 d-flex align-items-end">
+            <div class="form-check">
+              <input type="checkbox" name="sub_font_bold" id="id_sub_font_bold" class="form-check-input"
+                     {% if task.sub_font_bold %}checked{% endif %}>
+              <label for="id_sub_font_bold" class="form-check-label ms-1">加粗</label>
+            </div>
+          </div>
+          <div class="col-md-1 d-flex align-items-end">
+            <div class="form-check">
+              <input type="checkbox" name="sub_font_italic" id="id_sub_font_italic" class="form-check-input"
+                     {% if task.sub_font_italic %}checked{% endif %}>
+              <label for="id_sub_font_italic" class="form-check-label ms-1">倾斜</label>
+            </div>
+          </div>
+          <div class="col-md-2 d-flex align-items-end">
+            <div class="form-check">
+              <input type="checkbox" name="sub_font_underline" id="id_sub_font_underline" class="form-check-input"
+                     {% if task.sub_font_underline %}checked{% endif %}>
+              <label for="id_sub_font_underline" class="form-check-label ms-1">下划线</label>
+            </div>
+          </div>
+
+          <!-- 整体预览 -->
+          <div class="col-12">
+            <div class="preview-wrap" style="margin-top:.25rem;">
+              <span class="text-secondary">整体预览</span>
+              <span class="preview-badge" id="preview-combined">字幕 Preview 字</span>
+            </div>
+          </div>
+
+          <!-- 保存样式 -->
+          <div class="col-12 mt-1" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <button type="submit" class="btn btn-tech-outline d-flex align-items-center">
+              <i class="bi bi-save me-1"></i>保存样式
+            </button>
+          </div>
+        </form>
+
+        {% if task.tts_file and task.bg_video_file %}
+        <form action="{% url 'reburn_video' task.id %}" method="post" style="margin-left:150px;margin-top:-38px;">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-tech-outline d-flex align-items-center" style="color:#D97706;border-color:#D97706;" onclick="return confirm('确定仅重新烧录字幕吗？')">
+            <i class="bi bi-cc-circle me-1"></i>重新合成视频字幕
+          </button>
+        </form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- TTS 音色选择（可折叠） -->
+  <div class="card card-tech mb-4 mx-4">
+    <div class="card-header d-flex align-items-center justify-content-between">
+      <h6 class="mb-0 d-flex align-items-center">
+        <i class="bi bi-soundwave me-2" style="color: var(--tech-primary);"></i>
+        音色选择（重新合成之前请先点击保存音色，编辑翻译内容后也可点击重新合成）
+      </h6>
+      <button id="toggle-tts" class="btn btn-tech-outline btn-sm d-flex align-items-center"
+              type="button" data-bs-toggle="collapse" data-bs-target="#ttsCollapse"
+              aria-expanded="true" aria-controls="ttsCollapse">
+        <i id="ttsChevron" class="bi bi-chevron-up me-1"></i><span id="ttsBtnText">隐藏</span>
+      </button>
+    </div>
+    <div id="ttsCollapse" class="collapse show">
+      <div class="card-body">
+        <!-- 直接读取 task 字段，无 tts_form -->
+        <form method="post" class="row g-3" onsubmit="return confirm('保存当前音色设置？')">
+          {% csrf_token %}
+          <input type="hidden" name="action" value="save_tts">
+
+          <div class="col-md-3">
+            <label class="form-label fw-medium" for="id_tts_gender">配音性别</label>
+            <select id="id_tts_gender" name="tts_gender" class="form-select"
+                    data-current="{{ task.tts_gender|default_if_none:'' }}">
+              <option value="">请选择性别…</option>
+              <option value="female">女声</option>
+              <option value="male">男声</option>
+              <option value="original">视频原声</option>
+            </select>
+          </div>
+
+          <div class="col-md-5">
+            <label class="form-label fw-medium" for="id_tts_voice">音色</label>
+            <select id="id_tts_voice" name="tts_voice" class="form-select"
+                    data-current="{{ task.tts_voice|default_if_none:'' }}">
+              <option value="">请选择音色…</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label fw-medium">示例音频</label>
+            <div class="d-flex flex-column gap-2" id="tts-samples"></div>
+          </div>
+
+          <div class="col-12 mt-2">
+            <button type="submit" class="btn btn-tech"><i class="bi bi-save me-1"></i>保存音色</button>
+          </div>
+        </form>
+
+        {% if task.status == 'SUCCESS' %}
+        <form action="{% url 'refinalize_video' task.id %}" method="post" style="margin-left:150px;margin-top:-38px;">
+          {% csrf_token %}<input type="hidden" name="action" value="refinalize">
+          <button type="submit" class="btn btn-tech-outline btn-sm d-flex align-items-center" style="color:#EF4444;border-color:#EF4444;" onclick="return confirm('确定要重新合成视频吗？此操作会覆盖原有文件。')">
+            <i class="bi bi-arrow-repeat me-1"></i>重新合成
+          </button>
+        </form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- 主体（表格） -->
+  <div class="card-body">
+    <div class="row mb-4 g-3">
+      <div class="col-md-3"><div class="info-card"><span class="text-secondary">目标语言：</span><span class="fw-medium">{{ task.target_language_display }}</span></div></div>
+      <div class="col-md-3"><div class="info-card"><span class="text-secondary">任务状态：</span><span class="fw-medium">
+        {% if task.status == 'SUCCESS' %}<span class="status-tag status-success">处理成功</span>
+        {% elif task.status == 'REVIEW' %}<span class="status-tag status-warning">待处理</span>
+        {% elif task.status == 'PROCESSING' %}<span class="status-tag status-processing">处理中</span>
+        {% else %}<span class="status-tag status-danger">处理失败</span>{% endif %}
+      </span></div></div>
+      <div class="col-md-3"><div class="info-card"><span class="text-secondary">创建时间：</span><span class="fw-medium">{{ task.created_at|date:"Y-m-d H:i:s" }}</span></div></div>
+      <div class="col-md-3"><div class="info-card"><span class="text-secondary">字幕数量：</span><span class="fw-medium">{{ subtitle_count }} 段</span></div></div>
+    </div>
+
+    {% if task.final_video_file %}
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h6 class="mb-0 d-flex align-items-center"><i class="bi bi-file-video me-2" style="color:var(--tech-primary);"></i>最终视频</h6>
+      <button id="toggle-final-video" class="btn btn-tech-outline btn-sm d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#finalVideoCollapse" aria-expanded="true" aria-controls="finalVideoCollapse">
+        <i id="finalVideoChevron" class="bi bi-chevron-up me-1"></i><span id="finalVideoBtnText">隐藏</span>
+      </button>
+    </div>
+    <div id="finalVideoCollapse" class="collapse show">
+      <div class="alert alert-primary d-flex flex-column gap-3 mb-4" role="alert" style="background:var(--tech-primary-light);border-color:var(--tech-primary);color:var(--tech-primary);">
+        <div class="d-flex align-items-center gap-3">
+          <i class="bi bi-file-video fs-4"></i>
+          <div><strong>最终视频已生成（含合成语音与字幕）：</strong>
+            <a href="/media/{{ task.final_video_file }}" download class="text-tech-primary fw-medium" style="color:var(--tech-primary)!important;">下载 MP4</a>
+          </div>
+        </div>
+        <div class="video-container">
+          <video controls style="max-width:100%;height:auto;">
+            <source src="/media/{{ task.final_video_file }}" type="video/mp4">您的浏览器不支持视频播放，请更换浏览器后重试。
+          </video>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- 字幕表格 -->
+    <div class="table-responsive bg-white p-2 rounded-lg shadow-sm mb-2">
+      <table class="table table-hover table-tech mb-0">
+        <thead><tr><th>ID</th><th>开始时间</th><th>结束时间</th><th>原始字幕</th><th>翻译字幕</th><th>操作</th></tr></thead>
+        <tbody>
+          {% for sub in subtitles %}
+          <tr>
+            <td>{{ sub.sequence }}</td>
+            <td>{{ sub.start_time_srt }}</td>
+            <td>{{ sub.end_time_srt  }}</td>
+            <td class="text-left" style="white-space:normal;word-break:break-word;">{{ sub.original_text }}</td>
+            <td class="text-left" style="white-space:normal;word-break:break-word;">{% if sub.translated_text %}{{ sub.translated_text }}{% else %}<span class="text-secondary">暂无翻译</span>{% endif %}</td>
+            <td>
+              <!-- 改为按钮触发 Modal，并携带全部需要的数据 -->
+              <button
+                type="button"
+                class="btn btn-tech-outline btn-sm d-flex align-items-center justify-content-center btn-edit-sub"
+                data-bs-toggle="modal"
+                data-bs-target="#editModal"
+                data-sub-id="{{ sub.id }}"
+                data-start="{{ sub.start_time_srt }}"
+                data-end="{{ sub.end_time_srt }}"
+                data-original="{{ sub.original_text|escape }}"
+                data-translated="{{ sub.translated_text|default_if_none:''|escape }}"
+                data-seq="{{ sub.sequence }}"
+              >
+                <i class="bi bi-pencil me-1"></i>编辑
+              </button>
+            </td>
+          </tr>
+          {% empty %}
+          <tr><td colspan="6" class="text-center text-secondary py-4"><i class="bi bi-file-earmark-text me-2"></i>暂无字幕数据</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 字幕编辑 Modal（常驻，点击按钮时动态灌入） ========== -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content card-tech">
+      <div class="modal-header">
+        <h5 class="modal-title d-flex align-items-center">
+          <i class="bi bi-pencil me-2" style="color:var(--tech-primary);"></i>
+          <span>编辑第 <span id="editSeqText">-</span> 段字幕</span>
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form method="post" action="{% url 'task_detail' task.id %}">
+          {% csrf_token %}
+          <input type="hidden" name="action" value="edit_one">
+          <input type="hidden" name="edit_subtitle_id" id="edit_subtitle_id">
+          <input type="hidden" name="sequence" id="edit_sequence">
+
+          <div class="mb-3">
+            <label for="edit_start_time" class="form-label fw-medium">开始时间 <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="edit_start_time" name="start_time" required>
+            <div class="form-text text-secondary">示例：<code>00:01:23,456</code> 或 <code>83.456</code>（秒）</div>
+          </div>
+
+          <div class="mb-4">
+            <label for="edit_end_time" class="form-label fw-medium">结束时间 <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="edit_end_time" name="end_time" required>
+          </div>
+
+          <div class="mb-4">
+            <label for="edit_original_text" class="form-label fw-medium">原始字幕</label>
+            <input type="text" class="form-control" id="edit_original_text" name="original_text" readonly>
+          </div>
+
+          <div class="mb-4">
+            <label for="edit_translated_text" class="form-label fw-medium">翻译字幕（换行用 \n 表示）<span class="text-danger">*</span></label>
+            <textarea class="form-control" id="edit_translated_text" name="translated_text" rows="4" required></textarea>
+          </div>
+
+          <div class="modal-footer px-0">
+            <button type="button" class="btn btn-tech-outline" data-bs-dismiss="modal"><i class="bi bi-x me-1"></i>取消</button>
+            <button type="submit" class="btn btn-tech"><i class="bi bi-save me-1"></i>保存修改</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ========== TTS 交互脚本 ========== -->
+<script>
+const VOICE_BANK = {{ voice_bank_json|safe }};
+const TARGET_LANG="{{ task.target_language }}";
+const genderSelect=document.getElementById("id_tts_gender");
+const voiceSelect=document.getElementById("id_tts_voice");
+const sampleWrap=document.getElementById("tts-samples");
+
+/** 兼容旧值：把 'auto' 性别归一为 'original' */
+function normalizeGender(g){
+  const s=(g||"").trim().toLowerCase();
+  if(s==="auto") return "original";
+  if(s==="female"||s==="male"||s==="original") return s;
+  return "";
+}
+
+function findVoiceByCode(code){
+  if(!code) return null;
+  const list=VOICE_BANK[TARGET_LANG]||[];
+  return list.find(v=>v.code===code) || null;
+}
+
+function initTTSSelections(){
+  const currentVoice=(voiceSelect?.dataset.current||"").trim();
+  let currentGender=normalizeGender(genderSelect?.dataset.current||"");
+
+  // 如果已保存具体音色，则反推性别；auto 音色映射为 original
+  if(currentVoice){
+    const v=findVoiceByCode(currentVoice);
+    if(v){
+      if(v.code==="auto" || v.gender==="auto"){ currentGender="original"; }
+      else { currentGender=v.gender; }
+    }
+  }
+
+  if(currentGender){ genderSelect.value=currentGender; }
+}
+
+function refreshVoiceOptions(){
+  const all=VOICE_BANK[TARGET_LANG]||[];
+  if(!voiceSelect) return;
+
+  const selGender=normalizeGender(genderSelect?.value||"");
+  const autoItem=all.find(v=>v.code==="auto");
+
+  // original 仅 auto；female/male 各自性别
+  let bodyItems=[];
+  if(selGender==="original"){
+    bodyItems = autoItem ? [autoItem] : [];
+  }else if(selGender==="female" || selGender==="male"){
+    bodyItems = all.filter(v=>v.gender===selGender && v.code!=="auto");
+  }else{
+    bodyItems = [];
+  }
+
+  const previous = voiceSelect.value || voiceSelect.dataset.current || "";
+
+  voiceSelect.innerHTML="";
+  const placeholder=document.createElement("option");
+  placeholder.value="";
+  placeholder.textContent = bodyItems.length ? "请选择音色…" : "请先选择性别…";
+  voiceSelect.appendChild(placeholder);
+
+  bodyItems.forEach(v=>{
+    const o=document.createElement("option");
+    o.value=v.code; o.textContent=v.name;
+    voiceSelect.appendChild(o);
+  });
+
+  if(previous && bodyItems.some(v=>v.code===previous)){
+    voiceSelect.value=previous;
+  }else{
+    if(selGender==="original" && autoItem){ voiceSelect.value="auto"; }
+    else if(bodyItems.length>0){ voiceSelect.selectedIndex=1; }
+  }
+
+  refreshSamples();
+}
+
+function refreshSamples(){
+  const list=VOICE_BANK[TARGET_LANG]||[];
+  const code=voiceSelect?.value||"";
+  const v=list.find(x=>x.code===code);
+  sampleWrap.innerHTML="";
+  if(!v){
+    const d=document.createElement("div"); d.className="text-secondary"; d.textContent="暂无示例音频";
+    sampleWrap.appendChild(d); return;
+  }
+
+  const row=document.createElement("div");
+  row.className="d-flex align-items-center tts-sample-row";
+
+  const label=document.createElement("span");
+  label.textContent=v.name;
+
+  if(v.code==="auto"){
+    const tip=document.createElement("div");
+    tip.className="text-secondary";
+    tip.textContent="该选项将克隆视频原声（无示例）";
+    row.appendChild(label); row.appendChild(tip); sampleWrap.appendChild(row);
+    return;
+  }
+
+  const audio=document.createElement("audio"); audio.controls=true; audio.preload="none"; audio.src=v.sample||"";
+  row.appendChild(label); row.appendChild(audio); sampleWrap.appendChild(row);
+}
+
+genderSelect?.addEventListener("change", ()=>{ refreshVoiceOptions(); });
+voiceSelect?.addEventListener("change", refreshSamples);
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  initTTSSelections();
+  refreshVoiceOptions();
+});
+</script>
+
+<!-- ========== 颜色绑定 + 预览（保留，并加入 font-family 同步） ========== -->
+<script>
+function toHex6Strict(v){ const s=String(v||"").trim(); if(/^#[0-9a-fA-F]{6}$/.test(s)) return "#"+s.slice(1).toUpperCase(); return null; }
+function toHex6Lenient(v){ const m=String(v||"").trim().match(/^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/); if(!m) return null; let h=m[1]; if(h.length===3) h=h.split("").map(c=>c+c).join(""); return "#"+h.toUpperCase(); }
+function hexToRgb(hex){ const h=(hex||"#000000").replace("#",""); return {r:parseInt(h.slice(0,2),16),g:parseInt(h.slice(2,4),16),b:parseInt(h.slice(4,6),16)}; }
+function clamp01(x){ return Math.min(1, Math.max(0, +x || 0)); }
+function hexWithOpacity(hex,a){ const {r,g,b}=hexToRgb(hex); const alpha=1 - clamp01(a); return `rgba(${r},${g},${b},${alpha})`; }
+function buildOutlineShadow(color, width) {
+  const w = Math.max(0, parseInt(width, 10) || 0);
+  if (w === 0) return 'none';
+  const shadows = [];
+  for (let r = 1; r <= w; r++) {
+    shadows.push(`${-r}px 0 ${color}`); shadows.push(`${r}px 0 ${color}`);
+    shadows.push(`0 ${-r}px ${color}`); shadows.push(`0 ${r}px ${color}`);
+    shadows.push(`${-r}px ${-r}px ${color}`); shadows.push(`${r}px ${-r}px ${color}`);
+    shadows.push(`${-r}px ${r}px ${color}`); shadows.push(`${r}px ${r}px ${color}`);
+  }
+  return shadows.join(', ');
+}
+
+/** ===== 字体下拉逻辑（同步到隐藏字段 + 预览） ===== */
+function initFontSelect(){
+  const hidden = document.getElementById("id_sub_font_name");          // 实际提交字段
+  const select = document.getElementById("id_sub_font_name_select");   // 下拉
+  const custom = document.getElementById("id_sub_font_name_custom");   // 自定义输入
+  if(!hidden || !select || !custom) return;
+
+  const current = (select.dataset.current || "").trim();
+  const options = Array.from(select.options).map(o=>o.value).filter(Boolean);
+
+  // 判断当前值是否在下拉中
+  const inPreset = options.includes(current);
+  if(current && inPreset){
+    select.value = current;
+    custom.classList.add("d-none");
+    hidden.value = current;
+  }else if(current){ // 使用自定义
+    select.value = "__custom__";
+    custom.classList.remove("d-none");
+    custom.value = current;
+    hidden.value = current;
+  }else{ // 无值 -> 默认空
+    select.value = "";
+    custom.classList.add("d-none");
+    hidden.value = "";
+  }
+
+  select.addEventListener("change", e=>{
+    const v = e.target.value;
+    if(v === "__custom__"){
+      custom.classList.remove("d-none");
+      custom.focus();
+      // 使用自定义时，不立即清空，等待用户输入；若已有 custom.value 则同步
+      hidden.value = custom.value.trim();
+    }else{
+      custom.classList.add("d-none");
+      hidden.value = v; // 可能是空字符串（系统默认）
+    }
+    updateCombinedPreview();
+  });
+
+  custom.addEventListener("input", ()=>{
+    hidden.value = custom.value.trim();
+    updateCombinedPreview();
+  });
+}
+
+/** 给定一个字体名，拼接合理的 fallback */
+function buildFontFamilyStack(fontName){
+  const n = (fontName || "").trim();
+  if(!n) return `-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans CJK SC","PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei","DejaVu Sans",Arial,Helvetica,sans-serif`;
+  // 对包含空格的字体加引号
+  const quoted = /[\s]/.test(n) ? `"${n}"` : n;
+  return `${quoted},"Noto Sans CJK SC","PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei","DejaVu Sans",Arial,Helvetica,sans-serif`;
+}
+
+function bindColorTriad(hiddenId, pickerId, textId, onValidChange){
+  const hidden=document.getElementById(hiddenId), picker=document.getElementById(pickerId), text=document.getElementById(textId);
+  if(!hidden||!picker||!text) return;
+  const init=toHex6Lenient(hidden.value)||"#FFFFFF";
+  hidden.value=init; picker.value=init; text.value=init;
+  function apply(hex, from){
+    hidden.value=hex; if(from!=="picker") picker.value=hex; if(from!=="text") text.value=hex; if(typeof onValidChange==="function") onValidChange(hex);
+  }
+  picker.addEventListener("input", e=>{ const hex=toHex6Lenient(e.target.value)||picker.value; apply(hex,"picker"); });
+  text.addEventListener("input", e=>{ const hex=toHex6Strict(e.target.value); if(hex){ apply(hex,"text"); }});
+  text.addEventListener("change", e=>{ const hex=toHex6Strict(e.target.value); if(hex){ apply(hex,"text"); }});
+  if(typeof onValidChange==="function") onValidChange(init);
+}
+
+function updateCombinedPreview(){
+  const demo=document.getElementById("preview-combined"); if(!demo) return;
+
+  // 颜色/样式
+  const font=document.getElementById("id_sub_font_color")?.value||"#FFFFFF";
+  const outl=document.getElementById("id_sub_outline_color")?.value||"#000000";
+  const back=document.getElementById("id_sub_back_color")?.value||"#000000";
+  const rawOp=document.getElementById("id_sub_back_opacity")?.value??"0";
+  const f=toHex6Lenient(font)||"#FFFFFF"; const o=toHex6Lenient(outl)||"#000000"; const b=toHex6Lenient(back)||"#000000";
+  const boldChecked=document.getElementById("id_sub_font_bold")?.checked;
+  const italicChecked=document.getElementById("id_sub_font_italic")?.checked;
+  const underlineChecked=document.getElementById("id_sub_font_underline")?.checked;
+
+  demo.style.color=f;
+  demo.style.fontWeight=boldChecked?"700":"400";
+  demo.style.fontStyle=italicChecked?"italic":"normal";
+  demo.style.textDecoration=underlineChecked?"underline":"none";
+
+  const ow=document.getElementById("id_sub_outline_width")?.value; const owv=Math.max(0, parseInt(ow,10)||0);
+  demo.style.textShadow=buildOutlineShadow(o, owv);
+  demo.style.background=hexWithOpacity(b, rawOp);
+
+  const fs=document.getElementById("id_sub_font_size")?.value;
+  if(fs && !isNaN(parseFloat(fs))) demo.style.fontSize=`${parseFloat(fs)}px`;
+
+  // 字体：读取隐藏字段并应用 font-family
+  const fontName = document.getElementById("id_sub_font_name")?.value || "";
+  demo.style.fontFamily = buildFontFamilyStack(fontName);
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  initFontSelect();
+
+  bindColorTriad("id_sub_font_color","cp-id_sub_font_color","txt-id_sub_font_color",updateCombinedPreview);
+  bindColorTriad("id_sub_outline_color","cp-id_sub_outline_color","txt-id_sub_outline_color",updateCombinedPreview);
+  bindColorTriad("id_sub_back_color","cp-id_sub_back_color","txt-id_sub_back_color",updateCombinedPreview);
+
+  document.getElementById("id_sub_back_opacity")?.addEventListener("input", updateCombinedPreview);
+  document.getElementById("id_sub_font_size")?.addEventListener("input", updateCombinedPreview);
+  const ow=document.getElementById("id_sub_outline_width"); ow && ow.addEventListener("input", updateCombinedPreview); ow && ow.addEventListener("change", updateCombinedPreview);
+  document.getElementById("id_sub_font_bold")?.addEventListener("change", updateCombinedPreview);
+  document.getElementById("id_sub_font_italic")?.addEventListener("change", updateCombinedPreview);
+  document.getElementById("id_sub_font_underline")?.addEventListener("change", updateCombinedPreview);
+
+  updateCombinedPreview();
+});
+</script>
+
+<!-- ========== 最终视频折叠记忆 ========== -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const collapseEl=document.getElementById('finalVideoCollapse');
+  const btn=document.getElementById('toggle-final-video'); if(!collapseEl||!btn) return;
+  const chevron=document.getElementById('finalVideoChevron'); const btnText=document.getElementById('finalVideoBtnText');
+  const key='finalVideoExpanded:' + {{ task.id }};
+  const saved=localStorage.getItem(key); const shouldShow=(saved===null)?true:saved==='1';
+  if(shouldShow){collapseEl.classList.add('show');btn.setAttribute('aria-expanded','true');chevron.className='bi bi-chevron-up me-1';btnText.textContent='隐藏';}
+  else {collapseEl.classList.remove('show');btn.setAttribute('aria-expanded','false');chevron.className='bi bi-chevron-down me-1';btnText.textContent='展开';}
+  collapseEl.addEventListener('shown.bs.collapse',()=>{localStorage.setItem(key,'1');btn.setAttribute('aria-expanded','true');chevron.className='bi bi-chevron-up me-1';btnText.textContent='隐藏';});
+  collapseEl.addEventListener('hidden.bs.collapse',()=>{localStorage.setItem(key,'0');btn.setAttribute('aria-expanded','false');chevron.className='bi bi-chevron-down me-1';btnText.textContent='展开';});
+});
+</script>
+
+<!-- ========== 折叠记忆：字幕样式 & 音色 ========== -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  function initCollapseMemory(section) {
+    const collapseEl = document.getElementById(section.collapseId);
+    const btn = document.getElementById(section.btnId);
+    const chevron = document.getElementById(section.chevronId);
+    const btnText = document.getElementById(section.textId);
+    if (!collapseEl || !btn || !chevron || !btnText) return;
+
+    const key = section.storageKeyPrefix + ':' + {{ task.id }};
+    const saved = localStorage.getItem(key);
+    const shouldShow = (saved === null) ? true : (saved === '1');
+
+    if (shouldShow) {
+      collapseEl.classList.add('show');
+      btn.setAttribute('aria-expanded','true');
+      chevron.className = 'bi bi-chevron-up me-1';
+      btnText.textContent = '隐藏';
+    } else {
+      collapseEl.classList.remove('show');
+      btn.setAttribute('aria-expanded','false');
+      chevron.className = 'bi bi-chevron-down me-1';
+      btnText.textContent = '展开';
+    }
+
+    collapseEl.addEventListener('shown.bs.collapse', () => {
+      localStorage.setItem(key, '1');
+      btn.setAttribute('aria-expanded','true');
+      chevron.className = 'bi bi-chevron-up me-1';
+      btnText.textContent = '隐藏';
+    });
+    collapseEl.addEventListener('hidden.bs.collapse', () => {
+      localStorage.setItem(key, '0');
+      btn.setAttribute('aria-expanded','false');
+      chevron.className = 'bi bi-chevron-down me-1';
+      btnText.textContent = '展开';
+    });
+  }
+
+  initCollapseMemory({
+    collapseId: 'subtitleStyleCollapse',
+    btnId: 'toggle-style',
+    chevronId: 'styleChevron',
+    textId: 'styleBtnText',
+    storageKeyPrefix: 'subtitleStyleExpanded'
+  });
+
+  initCollapseMemory({
+    collapseId: 'ttsCollapse',
+    btnId: 'toggle-tts',
+    chevronId: 'ttsChevron',
+    textId: 'ttsBtnText',
+    storageKeyPrefix: 'ttsExpanded'
+  });
+});
+</script>
+
+<!-- ========== 编辑弹窗：数据灌入脚本 ========== -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // 代理所有编辑按钮
+  document.querySelectorAll('.btn-edit-sub').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      // 将数据写入表单
+      const id   = this.getAttribute('data-sub-id');
+      const seq  = this.getAttribute('data-seq');
+      const st   = this.getAttribute('data-start') || '';
+      const et   = this.getAttribute('data-end') || '';
+      const ori  = this.getAttribute('data-original') || '';
+      const tra  = this.getAttribute('data-translated') || '';
+
+      document.getElementById('edit_subtitle_id').value = id;
+      document.getElementById('edit_sequence').value = seq;
+
+      document.getElementById('editSeqText').textContent = seq;
+      document.getElementById('edit_start_time').value = st;
+      document.getElementById('edit_end_time').value = et;
+      document.getElementById('edit_original_text').value = ori;
+      document.getElementById('edit_translated_text').value = tra;
+    });
+  });
+});
+</script>
+{% endblock %}

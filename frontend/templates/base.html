@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}视频翻译助手{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入图标库（增强视觉） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    {% block extra_css %}
+    <style>
+        /* 1. 全局颜色变量（蓝白色系核心） */
+        :root {
+            --primary: #165DFF;        /* 主蓝色（企业级专业色） */
+            --primary-light: #E8F3FF;  /* 浅蓝（背景/hover） */
+            --primary-lighter: #F5F9FF;/* 更浅蓝（表格行hover） */
+            --primary-dark: #0E42CC;   /* 深蓝（hover/强调） */
+            --primary-opacity-10: rgba(22, 93, 255, 0.1); /* 边框/阴影 */
+            --primary-opacity-20: rgba(22, 93, 255, 0.2); /* 聚焦阴影 */
+            --white: #FFFFFF;          /* 纯白背景 */
+            --text-main: #1D2129;      /* 主要文字色 */
+            --text-secondary: #86909C; /* 次要文字色 */
+        }
+
+        /* 2. 导航栏样式（核心优化） */
+        .navbar-company {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--primary-opacity-10);
+            box-shadow: 0 2px 8px var(--primary-opacity-10); /* 轻微阴影提升层次 */
+            padding: 0.8rem 0; /* 上下内边距，更饱满 */
+        }
+        .navbar-company .navbar-brand {
+            color: var(--primary);
+            font-size: 1.3rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem; /* 图标与文字间距 */
+        }
+        /* 公司logo位置（预留替换） */
+        .navbar-company .brand-logo {
+            height: 2.2rem;
+            width: auto;
+        }
+        .navbar-company .navbar-nav .nav-link {
+            color: var(--text-main);
+            font-weight: 500;
+            padding: 0.5rem 1.2rem;
+            border-radius: 0.375rem; /* 圆角 hover 效果 */
+            margin: 0 0.2rem;
+            transition: all 0.2s ease;
+        }
+        .navbar-company .navbar-nav .nav-link:hover,
+        .navbar-company .navbar-nav .nav-link.active {
+            color: var(--primary);
+            background-color: var(--primary-light);
+        }
+        /* 移动端折叠按钮 */
+        .navbar-company .navbar-toggler {
+            border-color: var(--primary-opacity-20);
+        }
+        .navbar-company .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(22, 93, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        /* 3. 卡片样式（统一页面容器） */
+        .card-company {
+            background-color: var(--white);
+            border: 1px solid var(--primary-opacity-20);
+            border-radius: 0.6rem; /* 适中圆角，现代感 */
+            box-shadow: 0 2px 10px var(--primary-opacity-10);
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        .card-company:hover {
+            box-shadow: 0 4px 16px var(--primary-opacity-15); /* hover 增强阴影 */
+        }
+        .card-company .card-header {
+            background-color: var(--primary-light);
+            border-bottom: 1px solid var(--primary-opacity-20);
+            padding: 1rem 1.5rem;
+            color: var(--primary-dark);
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+        .card-company .card-body {
+            padding: 1.5rem;
+        }
+
+        /* 4. 按钮样式（统一交互） */
+        .btn-company {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.55rem 1.2rem;
+            font-weight: 500;
+            color: var(--white);
+            background-color: var(--primary);
+            border: none;
+            border-radius: 0.375rem;
+            transition: all 0.2s ease;
+        }
+        .btn-company:hover {
+            color: var(--white);
+            background-color: var(--primary-dark);
+            box-shadow: 0 2px 6px rgba(22, 93, 255, 0.3);
+        }
+        .btn-company-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.55rem 1.2rem;
+            font-weight: 500;
+            color: var(--primary);
+            background-color: transparent;
+            border: 1px solid var(--primary);
+            border-radius: 0.375rem;
+            transition: all 0.2s ease;
+        }
+        .btn-company-outline:hover {
+            color: var(--primary-dark);
+            background-color: var(--primary-light);
+            border-color: var(--primary-dark);
+        }
+
+        /* 5. 进度条样式 */
+        .progress-company {
+            height: 10px;
+            background-color: var(--primary-light);
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+        .progress-company .progress-bar {
+            background-color: var(--primary);
+            transition: width 0.4s ease; /* 平滑进度动画 */
+        }
+
+        /* 6. 徽章样式（状态提示） */
+        .badge-company {
+            padding: 0.3rem 0.6rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            font-size: 0.8rem;
+        }
+        .badge-queued {
+            color: var(--primary);
+            background-color: var(--primary-light);
+        }
+        .badge-processing {
+            color: var(--primary);
+            background-color: var(--primary-light);
+        }
+        .badge-review {
+            color: var(--primary-dark);
+            background-color: #CCE0FF;
+        }
+        .badge-success {
+            color: #0A3399;
+            background-color: #66B2FF;
+        }
+        .badge-failed {
+            color: #DC2626;
+            background-color: #FEE2E2; /* 失败用浅红，不破坏蓝白主调 */
+        }
+
+        /* 7. 表格样式 */
+        .table-company {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        .table-company thead th {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            font-weight: 600;
+            padding: 0.9rem 1.2rem;
+            border-bottom: 1px solid var(--primary-opacity-20);
+            text-align: left;
+        }
+        .table-company tbody td {
+            padding: 0.9rem 1.2rem;
+            border-bottom: 1px solid var(--primary-opacity-10);
+            transition: background-color 0.2s ease;
+        }
+        .table-company tbody tr:hover td {
+            background-color: var(--primary-lighter);
+        }
+
+        /* 8. 表单样式 */
+        .form-label {
+            color: var(--text-main);
+            font-weight: 500;
+            margin-bottom: 0.6rem;
+        }
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-opacity-20);
+            outline: none;
+        }
+        .form-control,
+        .form-select {
+            border: 1px solid var(--primary-opacity-20);
+            border-radius: 0.375rem;
+            padding: 0.6rem 0.8rem;
+            transition: all 0.2s ease;
+        }
+
+        /* 9. 页面容器 */
+        .page-container {
+            padding: 2rem 0;
+        }
+    </style>
+    {% endblock %}
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-company">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'task_list' %}">
+                <img src="/static/images/logo.png" alt="公司Logo" class="brand-logo">
+                <span>视频翻译助手</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"> <!-- 右对齐导航 -->
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'task_list' %}active{% endif %}" href="{% url 'task_list' %}">
+                            <i class="bi bi-list-task"></i> 任务列表
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'video_upload' %}active{% endif %}" href="{% url 'video_upload' %}">
+                            <i class="bi bi-upload"></i> 新建任务
+                        </a>
+                    </li>
+                    <!-- 预留公司网站其他导航（如关于我们、帮助中心） -->
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'help_center' %}active{% endif %}"
+                        href="{% url 'help_center' %}">
+                        <i class="bi bi-question-circle"></i> 帮助中心
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面内容容器 -->
+    <div class="container page-container">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    <i class="bi {% if message.tags == 'success' %}bi-check-circle{% elif message.tags == 'error' %}bi-exclamation-circle{% else %}bi-info-circle{% endif %} me-2"></i>
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

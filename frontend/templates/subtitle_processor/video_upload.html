@@ -1,0 +1,332 @@
+{% extends 'base.html' %}
+
+{% block title %}上传视频{% endblock %}
+
+{% block content %}
+
+<!-- 错误提示强化：仅作用于本页 -->
+<style>
+/* === 仅作用于“上传视频”页面的错误消息增强样式 === */
+.page-container .alert-error,
+.page-container .alert-danger {
+  --danger-bg: #FEE2E2;
+  --danger-border: #FCA5A5;
+  --danger-text: #B91C1C;
+  background: var(--danger-bg);
+  border: 1px solid var(--danger-border);
+  color: var(--danger-text);
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.12);
+  position: sticky;     /* 粘在容器顶部，避免被表单淹没 */
+  top: 12px;
+  z-index: 1030;
+  border-left: 6px solid #ef4444; /* 左侧强调条更醒目 */
+  border-radius: .5rem;
+}
+
+/* 错误图标更突出 */
+.page-container .alert-error .bi-exclamation-circle,
+.page-container .alert-danger .bi-exclamation-circle {
+  font-size: 1.15rem;
+  margin-right: .25rem;
+}
+
+/* 轻微晃动动画（尊重用户的动画偏好） */
+@keyframes subtle-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-1px); }
+  80% { transform: translateX(1px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .alert-attention {
+    animation: subtle-shake .45s ease-in-out 1;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // 仅在本页增强：把 .alert-error 统一视为 .alert-danger（Bootstrap 风格）
+  document.querySelectorAll('.page-container .alert-error').forEach(function(el){
+    el.classList.add('alert-danger');
+  });
+
+  // 若存在错误消息：滚动到视口 + 轻微强调动画
+  const firstErr = document.querySelector('.page-container .alert-danger');
+  if (firstErr) {
+    try { firstErr.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (_) {}
+    firstErr.classList.add('alert-attention');
+    // 其它错误不做动画，避免视觉负担
+    document.querySelectorAll('.page-container .alert-danger:not(:first-of-type)').forEach(function(x){
+      x.classList.remove('alert-attention');
+    });
+  }
+});
+</script>
+
+<div class="row justify-content-center">
+  <div class="col-md-8 col-lg-7">
+    <div class="card-company">
+      <div class="card-header">
+        <h5 class="mb-0">
+          <i class="bi bi-upload me-2"></i>上传视频并创建视频翻译任务
+        </h5>
+        <p class="text-secondary small mt-2">
+          当前限制：视频时长 ≤ <span id="limit-text"></span>。
+        </p>
+        <div id="duration-hint" class="small mt-1 text-secondary"></div>
+        <div id="duration-error" class="alert alert-danger d-none mt-2" role="alert">
+          <i class="bi bi-exclamation-circle me-2"></i>
+          <span id="duration-error-text"></span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <form id="upload-form" method="post" enctype="multipart/form-data" class="needs-validation" novalidate
+              data-max-seconds="{{ max_video_seconds|default:0 }}">
+          {% csrf_token %}
+
+          {# —— 额外隐藏字段：把前端探测结果一并提交 —— #}
+          <input type="hidden" name="frontend_duration_seconds" id="id_frontend_duration_seconds" value="">
+          <input type="hidden" name="frontend_probe" id="id_frontend_probe" value="">
+
+          {% for field in form %}
+            <div class="mb-4">
+              <label for="{{ field.id_for_label }}" class="form-label">
+                {{ field.label }}
+                {% if field.field.required %}
+                  <span class="text-danger">*</span>
+                {% endif %}
+              </label>
+              {{ field }}
+              {% if field.help_text %}
+                <div class="form-text text-secondary mt-1">
+                  <i class="bi bi-info-circle me-1"></i>{{ field.help_text }}
+                </div>
+              {% endif %}
+              {% for error in field.errors %}
+                <div class="text-danger mt-1">
+                  <i class="bi bi-exclamation-circle me-1"></i>{{ error }}
+                </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+
+          <div class="d-flex gap-3 mt-5">
+            <button id="submit-btn" type="submit" class="btn-company flex-grow-1">
+              <i class="bi bi-send"></i> 提交任务
+            </button>
+            <a href="{% url 'task_list' %}" class="btn-company-outline">
+              <i class="bi bi-arrow-left"></i> 返回列表
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Toast 容器（Bootstrap 5） #}
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+  <div id="repeat-toast" class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">请勿重复提交</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* 将限制秒数显示为 “mm 分钟 ss 秒” 或 “xx 秒” */
+document.addEventListener('DOMContentLoaded', function () {
+  var ms = Number('{{ max_video_seconds }}') || 0;
+  var text = ms >= 60
+    ? (Math.floor(ms/60) + ' 分钟 ' + (ms % 60) + ' 秒')
+    : (ms + ' 秒');
+  var el = document.getElementById('limit-text');
+  if (el) el.textContent = text;
+});
+</script>
+
+<script>
+(function () {
+  const form = document.getElementById('upload-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const toastEl = document.getElementById('repeat-toast');
+  const fileInput = document.getElementById('{{ form.video_file.id_for_label }}');
+  const maxSeconds = Number(form.dataset.maxSeconds || 0);
+
+  const hiddenDur = document.getElementById('id_frontend_duration_seconds');
+  const hiddenProbe = document.getElementById('id_frontend_probe');
+
+  const hint = document.getElementById('duration-hint');
+  const errBox = document.getElementById('duration-error');
+  const errText = document.getElementById('duration-error-text');
+
+  let isSubmitting = false;
+  let detected = { ok: false, seconds: null };
+  let url = null, vid = null, timeoutId = null;
+
+  function showToast() {
+    if (window.bootstrap && bootstrap.Toast) {
+      const t = bootstrap.Toast.getOrCreateInstance(toastEl, { delay: 2000 });
+      t.show();
+    } else {
+      alert('请勿重复提交');
+    }
+  }
+
+  function clearVideoProbe() {
+    if (vid) { vid.remove(); vid = null; }
+    if (url) { try { URL.revokeObjectURL(url); } catch(_){} url = null; }
+    if (timeoutId) { clearTimeout(timeoutId); timeoutId = null; }
+  }
+
+  function formatHMS(sec) {
+    const s = Math.max(0, Number(sec) || 0);
+    const mm = Math.floor(s / 60);
+    const ss = Math.floor(s % 60);
+    const ms = Math.round((s - Math.floor(s)) * 1000);
+    return `${String(mm).padStart(2,'0')}:${String(ss).padStart(2,'0')}.${String(ms).padStart(3,'0')}`;
+  }
+
+  function setHint(text, isError=false) {
+    if (isError) {
+      errText.textContent = text;
+      errBox.classList.remove('d-none');
+      hint.textContent = '';
+    } else {
+      errBox.classList.add('d-none');
+      hint.textContent = text || '';
+    }
+  }
+
+  // 选择文件 → 前端探测时长
+  fileInput?.addEventListener('change', () => {
+    clearVideoProbe();
+    detected = { ok:false, seconds:null };
+    hiddenDur.value = '';
+    hiddenProbe.value = '';
+
+    const file = fileInput.files && fileInput.files[0];
+    if (!file) {
+      setHint('');
+      return;
+    }
+
+    // 仅尝试视频
+    if (file.type && !file.type.startsWith('video/')) {
+      setHint('所选文件不是视频文件，已跳过前端时长检测。将由后端校验。');
+      hiddenProbe.value = 'frontend_failed';
+      return;
+    }
+
+    // 创建隐藏 video 用于读取 metadata
+    url = URL.createObjectURL(file);
+    vid = document.createElement('video');
+    vid.preload = 'metadata';
+    vid.muted = true;
+    vid.style.position = 'absolute';
+    vid.style.left = '-99999px';
+    vid.src = url;
+    document.body.appendChild(vid);
+
+    // 超时兜底（比如有的浏览器读不到元数据）
+    timeoutId = setTimeout(() => {
+      if (!detected.ok) {
+        setHint('未能在预期时间内读取视频时长，已放行提交，后端会再次校验。');
+        hiddenProbe.value = 'frontend_failed';
+        clearVideoProbe();
+      }
+    }, 4000);
+
+    vid.addEventListener('loadedmetadata', () => {
+      if (!vid || detected.ok) return;
+      const dur = Number(vid.duration);
+      detected = { ok: Number.isFinite(dur) && dur > 0, seconds: dur };
+      clearVideoProbe();
+
+      if (detected.ok) {
+        const pass = maxSeconds > 0 ? (dur <= maxSeconds) : true;
+        const limitStr = maxSeconds > 0 ? `（上限 ${formatHMS(maxSeconds)}）` : '';
+        setHint(`前端检测到视频时长：${formatHMS(dur)} ${limitStr}`);
+
+        if (!pass) {
+          // 超限：直接拦截提交
+          hiddenProbe.value = 'frontend_ok';
+          hiddenDur.value = dur.toFixed(3);
+          setHint(`视频过长：${formatHMS(dur)}，超过上限 ${formatHMS(maxSeconds)}，请裁剪后再上传。`, true);
+        } else {
+          // 通过：随表单上送
+          hiddenProbe.value = 'frontend_ok';
+          hiddenDur.value = dur.toFixed(3);
+        }
+      } else {
+        setHint('未能读取视频时长，已放行提交；后端会再次校验。');
+        hiddenProbe.value = 'frontend_failed';
+      }
+    }, { once:true });
+
+    vid.addEventListener('error', () => {
+      detected = { ok:false, seconds:null };
+      setHint('读取视频元数据失败，已放行提交；后端会再次校验。');
+      hiddenProbe.value = 'frontend_failed';
+      clearVideoProbe();
+    }, { once:true });
+  });
+
+  // 原有防重复 + 提交流程，加入时长校验拦截逻辑
+  form.addEventListener('submit', function (e) {
+    // 原生必填校验
+    if (!form.checkValidity()) {
+      e.preventDefault();
+      e.stopPropagation();
+      form.classList.add('was-validated');
+      return;
+    }
+
+    // 如果前端已成功得到时长，且超限 → 阻止提交
+    if (detected.ok && maxSeconds > 0 && detected.seconds > maxSeconds) {
+      e.preventDefault();
+      e.stopPropagation();
+      setHint(`视频过长：${formatHMS(detected.seconds)}，超过上限 ${formatHMS(maxSeconds)}，请裁剪后再上传。`, true);
+      try { document.getElementById('duration-error').scrollIntoView({ behavior:'smooth', block:'center' }); } catch(_){}
+      return;
+    }
+
+    // 探测成功但未写入（理论不至于）→ 写入
+    if (detected.ok) {
+      hiddenProbe.value = hiddenProbe.value || 'frontend_ok';
+      hiddenDur.value = hiddenDur.value || detected.seconds.toFixed(3);
+    } else {
+      // 探测失败 → 不拦截，但告诉后端
+      hiddenProbe.value = hiddenProbe.value || 'frontend_failed';
+      hiddenDur.value = '';
+    }
+
+    // 防重复提交
+    if (isSubmitting) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (window.bootstrap && bootstrap.Toast) {
+        const t = bootstrap.Toast.getOrCreateInstance(toastEl, { delay: 2000 });
+        t.show();
+      } else {
+        alert('请勿重复提交');
+      }
+      return;
+    }
+
+    isSubmitting = true;
+    submitBtn.disabled = true;
+    submitBtn.classList.add('disabled');
+    submitBtn.dataset.originalHtml = submitBtn.innerHTML;
+    submitBtn.innerHTML =
+      '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>正在提交...';
+
+    // 让浏览器正常提交到后端
+  }, false);
+})();
+</script>
+{% endblock %}
